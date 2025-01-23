@@ -8,98 +8,306 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
     <link rel="stylesheet" href="./assets/styles/global.css">
     <link rel="stylesheet" href="./assets/styles/index.css">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100 gap-5">
     <!-- Header -->
-    <header class="position-relative d-flex flex-column gap-5">
-        <!-- First Header -->
-        <nav class="d-lg-flex d-none justify-content-center gap-5 position-relative" id="main-nav">
-            <!-- <a href="./index.html">  <div class="logo" >MEEMII'S</div> -->
-            <a href="./pages/contact.html" class="nav-link">CREATE AN ACCOUNT</a>
-            <a href="#" class="nav-link">SIGN IN</a>
-            <a href="#" class="nav-link">FIND A STORE</a>
-            <a href="#" class="nav-link">العربية</a>
+    <header class="position-relative ">
+        <!-- Top Navbar -->
+        <nav class="d-none d-lg-flex justify-content-center gap-3 py-2 bg-light">
+            <a href="#" class="nav-link text-pink">CREATE AN ACCOUNT</a>
+            <a href="#" class="nav-link text-pink">SIGN IN</a>
+            <a href="#" class="nav-link text-pink">FIND A STORE</a>
+            <a href="#" class="nav-link text-pink">العربية</a>
             <a class="nav-link Shop_by_Fragrance" href="#">Shop by Fragrance</a>
         </nav>
-        <!--Secound Header  -->
-        <div class="header_2 d-flex justify-content-around">
-            <img src="./assets/imgs/header/burger-bar.png" width="30" alt="burger" class="d-sm-flex d-lg-none "
-                data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
 
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-                aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-body d-flex flex-column align-items-center gap-3 col-12">
-                    <a href="">Home</a>
-                    <a href="">Landing</a>
-                    <a href="">About</a>
-                    <a href="">Team</a>
-                    <a href="">Contact</a>
-                    <a href="">Gallery</a>
+        <!-- Main Navbar -->
+        <div class="header_2 d-flex justify-content-between align-items-center p-3">
+            <img src="./assets/imgs/header/burger-bar.png" width="30" alt="Menu" class="icon  d-lg-none "
+                data-bs-toggle="offcanvas" href="#offcanvasMenu">
+
+            <div class="offcanvas offcanvas-start" id="offcanvasMenu">
+                <div class="offcanvas-body">
+                    <a href="#" class="d-block text-pink">Home</a>
+                    <a href="#" class="d-block text-pink">Shop</a>
+                    <a href="#" class="d-block text-pink">About</a>
+                    <a href="#" class="d-block text-pink">Contact</a>
                 </div>
-
             </div>
-            <div class="search-container position-relative d-none d-lg-flex">
+
+            <div class="search-container d-none d-lg-flex align-items-center border rounded p-2 ">
                 <input type="text" placeholder="Search">
-                <img class="icon position-absolute" src="./assets/imgs/header/search-icon.png" width="20px">
-            </div>
-            <a href="./index.html"> <img src="./assets/imgs/Logo/meemiis.png" width="200px" class="logo"></a>
-            <!-- <a href="./index.html">  <div class="logo-text" >MEEMII'S</div> -->
-            </a>
-            <div class="icons">
-                <img class="icon" src="./assets/imgs//header/heart.png" width="30px">
-
-                <img class="icon" src="./assets/imgs//header/shopping-bag.png" width="30px">
-            </div>
-        </div>
-        <!-- Third Header -->
-        <div class="header_3 d-flex justify-content-center gap-3">
-            <div class="dropdown">
-                <a href="#" class="dropdown-nav ">Body Care</a>
-                <div class="dropdown-menu">
-                    <div class="dropdown-column">
-                        <h4>Featured</h4>
-                        <ul>
-                            <li><a href="#">All Body Care</a></li>
-                            <li><a href="#">Customer Favorites</a></li>
-                            <li><a href="#">Travel Size</a></li>
-                        </ul>
-                    </div>
-                    <div class="dropdown-column">
-                        <h4>Bath & Shower</h4>
-                        <ul>
-                            <li><a href="#">Body Care Offers</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <img class="icon" src="./assets/imgs/header/search-icon.png" alt="Search" width="20">
             </div>
 
-            <a href="#" class="dropdown-nav">Candles</a>
-            <a href="#" class="dropdown-nav">Hand Soaps</a>
-            <a href="#" class="dropdown-nav">Gifts</a>
+            <a href="./index.html"><img src="./assets/imgs/Logo/meemiis.png" width="150" alt="Logo"></a>
+
+            <div class="icons d-flex gap-3 col-lg-3">
+                <img class="icon" src="./assets/imgs/header/heart.png" alt="Wishlist" width="30">
+                <img class="icon" src="./assets/imgs/header/shopping-bag.png" alt="Cart" width="30">
+            </div>
         </div>
-         <!-- recomandition-nav -->
-    <div class="recomandition-header d-lg-flex d-none justify-content-center align-items-center gap-5">
-            <a href="#" class="dropdown-nav "><span style="font-weight: 900;">Same day delivery</span> is now avialable</a>
-            <a href="#" class="dropdown-nav "><span style="font-weight: 900;">Download</span> our App</a>
-            <a href="#" class="dropdown-nav "><span style="font-weight: 900;">Shop </span> Gift now</a>
+
+        <!-- Category Navbar -->
+        <nav class="d-flex justify-content-center align-items-center gap-5 py-3 ">
+            <a href="#" class="nav-link text-pink ">Body Care</a>
+            <a href="#" class="nav-link text-pink ">Candles</a>
+            <a href="#" class="nav-link text-pink ">Hand Soaps</a>
+            <a href="#" class="nav-link text-pink ">Gifts</a>
+        </nav>
+        <!-- recomandition-nav -->
+        <div class="recomandition-header d-lg-flex d-none justify-content-center align-items-center gap-5 bg-light">
+            <a href="#" class=" text-pink"><span style="font-weight: 900;">Same day delivery</span> is now avialable</a>
+            <a href="#" class=" text-pink"><span style="font-weight: 900;">Download</span> our App</a>
+            <a href="#" class=" text-pink"><span style="font-weight: 900;">Shop </span> Gift now</a>
         </div>
     </header>
-    <!--  hero section-->
 
+    <!-- Hero Section -->
+    <div class="Home_page">
         <div class="hero-section d-flex justify-content-center">
             <a href="./pages/contact.html">
                 <img class="hero-image" src="./assets/imgs/home_images/sale3.png">
                 <img class="hero-image" src="./assets/imgs/home_images/hero_image.jpeg">
             </a>
         </div>
-        <script src="./assets/scripts/nav.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
+
+        <!-- Featured Categories Section -->
+        <section class="featured-categories container my-5">
+            <div class="row text-center">
+                <div class="col-md-6 col-lg-6 mb-4">
+                    <div class="card border-0">
+                        <img src="./assets/imgs/home_images/red.jfif" class="card-img-top rounded border border-black" alt="Body Care">
+                        <div class="card-body">
+                            <p class="card-text">Your favorite way to fragrance!</p>
+                            <a href="#" class="btn btn-link text-uppercase fw-bold text-pink">Shop Body Care</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 mb-4">
+                    <div class="card border-0">
+                        <img src="./assets/imgs/home_images/red.jfif" class="card-img-top rounded border border-black" alt="Hand Soaps">
+                        <div class="card-body">
+                            <p class="card-text">Everything you need to leave your hands feeling clean and cared for.
+                            </p>
+                            <a href="#" class="btn btn-link text-uppercase fw-bold text-pink">Shop Hand Soaps</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 mb-4">
+                    <div class="card border-0">
+                        <img src="./assets/imgs/home_images/red.jfif" class="card-img-top rounded border border-black" alt="3-Wicks">
+                        <div class="card-body">
+                            <p class="card-text">Decorate every room with fragrance.</p>
+                            <a href="#" class="btn btn-link text-uppercase fw-bold text-pink">Shop 3-Wicks</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 mb-4">
+                    <img src="./assets/imgs/home_images/red.jfif" class="card-img-top rounded border border-black" alt="Aromatherapy">
+                    <div class="card-body">
+                        <p class="card-text">New Aromatherapy Blends.</p>
+                        <a href="#" class="btn btn-link text-uppercase fw-bold text-pink">Shop Aromatherapy</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+
+    <!-- Products Section -->
+      <section class="products-section container">
+        <h2 class="text-center mb-4">Best Sellers</h2>
+        <div class="product-slider row g-4 ">
+
+        </div>
+        <div class="slider-controls">
+            <button id="prevBtn" class="btn btn-secondary">Previous</button>
+            <button id="nextBtn" class="btn btn-secondary">Next</button>
+        </div>
+    </section>
+    </div>
+    <footer class="container-fluid bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5 class=" fw-bold  text-pink">SHOP BY</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">Candles</a></li>
+                        <li><a href="#" class="text-dark">Hand Soaps</a></li>
+                        <li><a href="#" class="text-dark">Gifts</a></li>
+                        <li><a href="#" class="text-dark">Body Care</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold text-pink">DISCOVER</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">Our Story</a></li>
+                        <li><a href="#" class="text-dark">Delivery Information</a></li>
+                        <li><a href="#" class="text-dark">Terms & Conditions of Sale</a></li>
+                        <li><a href="#" class="text-dark">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-dark">Privacy Policy</a></li>
+                        <li><a href="#" class="text-dark">Returns & Refunds</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold text-pink">CUSTOMER CARE</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">FAQs</a></li>
+                        <li><a href="#" class="text-dark">Contact Us</a></li>
+                        <li><a href="#" class="text-dark">Store Locator</a></li>
+                        <li><a href="#" class="text-dark">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold text-pink">CONNECT WITH US</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-dark"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-dark"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-dark"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="mt-3">
+                        <h6 class="fw-bold text-pink">SIGN UP</h6>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email address"
+                                aria-label="Email" aria-describedby="button-addon2">
+                            <button class="btn btn-primary" type="button" id="button-addon2">SIGN UP</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="text-muted mb-0">© Bath & Body Works. All Rights Reserved 2023</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        <script>
+            // Product data with unique images and descriptions
+            const products = [
+                {
+                    name: "Elegant Watch",
+                    price: 895,
+                    image: "./assets/imgs/home_images/red.jfif",
+                },
+                {
+                    name: "Leather Messenger Bag",
+                    price: 1295,
+                    image: "./assets/imgs/home_images/red.jfif",
+                },
+                {
+                    name: "Smart Wireless Earbuds",
+                    price: 599,
+                    image: "./assets/imgs/home_images/red.jfif",
+                },
+                {
+                    name: "Designer Sunglasses",
+                    price: 1099,
+                    image: "./assets/imgs/home_images/red.jfif",
+                },
+                {
+                    name: "Fitness Smartwatch",
+                    price: 1499,
+                    image: "./assets/imgs/home_images/red.jfif",
+                },
+                {
+                    name: "Portable Bluetooth Speaker",
+                    price: 399,
+                    image: "./assets/imgs/home_images/red.jfif",
+                },
+                {
+                    name: "Premium Laptop Backpack",
+                    price: 799,
+                    image: "./assets/imgs/home_images/red.jfif",
+                },
+                {
+                    name: "Wireless Charging Pad",
+                    price: 199,
+                    image: "./assets/imgs/home_images/red.jfif",
+                },
+                {
+                    name: "Professional Camera",
+                    price: 2499,
+                    image: "./assets/imgs/home_images/red.jfif",
+                },
+                {
+                    name: "Gaming Headset",
+                    price: 649,
+                    image: "./assets/imgs/home_images/red.jfif",
+                },
+                {
+                    name: "Portable Power Bank",
+                    price: 299,
+                    image: "./assets/imgs/home_images/red.jfif",
+                },
+                {
+                    name: "Smart Home Security Camera",
+                    price: 599,
+                    image: "./assets/imgs/home_images/red.jfif",
+                }
+            ];
+    
+            const productSlider = document.querySelector('.product-slider');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            let currentSlide = 0;
+    
+            // Function to render products
+            function renderProducts() {
+                productSlider.innerHTML = ''; // Clear existing products
+                
+                // Calculate start and end indices for current slide
+                const startIndex = currentSlide * 4;
+                const endIndex = startIndex + 4;
+                
+                // Slice the products for current view
+                const visibleProducts = products.slice(startIndex, endIndex);
+                
+                visibleProducts.forEach(product => {
+                    const productCol = document.createElement('div');
+                    productCol.className = 'col-md-3';
+                    productCol.innerHTML = `
+                        <div class="card product-card">
+                            <img src="${product.image}" alt="${product.name}" class="card-img-top rounded">
+                            <div class="card-body text-center">
+                                <div class="product-title fw-bold">${product.name}</div>
+                                <div class="product-price text-pink fw-bold">EGP ${product.price}</div>
+                                <button class="btn btn-primary w-100 mt-2">Add to Bag</button>
+                            </div>
+                        </div>
+                    `;
+                    productSlider.appendChild(productCol);
+                });
+            }
+    
+            // Navigation functions
+            function showNextSlide() {
+                const maxSlides = Math.ceil(products.length / 4);
+                currentSlide = (currentSlide + 1) % maxSlides;
+                renderProducts();
+            }
+    
+            function showPrevSlide() {
+                const maxSlides = Math.ceil(products.length / 4);
+                currentSlide = (currentSlide - 1 + maxSlides) % maxSlides;
+                renderProducts();
+            }
+    
+            // Event listeners for navigation
+            nextBtn.addEventListener('click', showNextSlide);
+            prevBtn.addEventListener('click', showPrevSlide);
+    
+            // Initial render
+            renderProducts();
+        </script>
+    
 </body>
 
 </html>

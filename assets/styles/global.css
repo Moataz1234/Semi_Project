@@ -3,3 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.text-pink {
+    color: #fc8fa7;
+}
+.text-pink:hover {
+    font-weight: 900;
+}
