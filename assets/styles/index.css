@@ -19,17 +19,15 @@ a {
 }
 
 .icon {
-    filter: invert(77%) sepia(10%) saturate(1233%) hue-rotate(300deg) brightness(100%) contrast(100%);
+    filter: invert(57%) sepia(10%) saturate(1233%) hue-rotate(300deg) brightness(100%) contrast(100%);
 }
 
 .header_2 {
     position: relative;
 }
-
-.recomandition-header a:hover {
-    font-weight: 100;
+.recomandition-header , .first_nav{
+    background-color: #c3bebe;
 }
-
 .hero-image {
     width: 49%;
     max-height: 70%;
@@ -56,7 +54,7 @@ a {
     transition: transform 0.3s ease;
 }
 
-/* Hide the dropdown content by default */
+Hide the dropdown content by default
 .dropdown-content {
     display: none;
     position: absolute;
@@ -113,4 +111,39 @@ a {
 footer a:hover {
     color: #fc8fa7 !important;
     font-weight: 500;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
