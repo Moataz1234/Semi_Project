@@ -1,149 +1,217 @@
-a {
-    text-decoration: none;
+
+.Home_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
-.Shop_by_Fragrance {
-    color: #003971;
-    position: absolute;
-    right: 10rem;
-}
-
-.nav-link:hover {
-    color: #fc8fa7;
-}
-
-.search-container input {
-    border: none;
-    outline: none;
-    font-size: 14px;
-}
-
-.icon {
-    filter: invert(57%) sepia(10%) saturate(1233%) hue-rotate(300deg) brightness(100%) contrast(100%);
-}
-
-.header_2 {
-    position: relative;
-}
-.recomandition-header , .first_nav{
-    background-color: #c3bebe;
-}
-.hero-image {
-    width: 49%;
-    max-height: 70%;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    /* Optional: makes the edges rounded */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    /* Optional: adds a shadow */
-}
-
-.hero-section {
-    width: 100%;
-}
-
-.hero-section a {
-    width: 70%;
-    text-decoration: none;
-    /* Remove the underline for the link */
-}
-
-.hero-section a:hover .hero-image {
-    transform: scale(1.05);
-    /* Optional: adds a hover effect */
-    transition: transform 0.3s ease;
-}
-
-Hide the dropdown content by default
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    z-index: 1000;
-    width: 600px;
-    height: 100px;
-    box-sizing: border-box;
-
-}
-
-/* Split the dropdown into left and right sections */
-.dropdown-content .left-section,
-.dropdown-content .right-section {
-    width: 50%;
-    float: left;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-/* Clear the float */
-.dropdown-content::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Show the dropdown content on hover */
-.dropdown-nav:hover+.dropdown-content,
-.dropdown-content:hover {
-    display: block;
-}
 
 .Shop_by_Fragrance:hover {
     color: #003971;
     font-weight: 900;
 }
 
-.Home_page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* banner */
+.banner {
+    background-color: #fbabb8;
+    position: relative;
+    border: 8px solid #DAA520;
+    width: 70%;
+    height: 433px;
+}
+
+.banner-text  {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 5px 5px 2px rgba(230, 10, 94, 0.2);
+}
+.banner_containar {
+    margin-left: 70px;
 
 }
 
-@media only screen and (max-width: 425px) {
-    .logo {
-        width: 150px;
-    }
+.gift-card-img {
+    height: 200px;
+    width: 300px;
 }
 
-footer a:hover {
-    color: #fc8fa7 !important;
+.shop-button {
+    background-color: #004080;
+    color: white;
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+}
+
+.roses {
+    position: absolute;
+    max-width: 200px;
+}
+
+.rose-left {
+    left: 0;
+    bottom: 0;
+}
+
+.rose-right {
+    right: 0;
+    bottom: 0;
+}
+.banner_section {
+    background-color: #003971;
+}
+/* product section */
+.product-card img{
+    border: 1px solid #ddd;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 300px;
+}
+/* dropdown list */
+
+.category_header {
+    position: relative;
+}
+
+.category-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 300px;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.category-link:hover + .category-dropdown,
+.category-dropdown:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.category-dropdown h5 {
+    color: #ff69b4;
+    margin-bottom: 15px;
+}
+
+.category-dropdown ul li a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.category-dropdown ul li a:hover {
+    color: #ff69b4;
+}
+
+/* off-canvas */
+
+.offcanvas .nav-tabs {
+    border-bottom: 2px solid #ff69b4;
+}
+
+.offcanvas .nav-tabs .nav-link {
+    border: none;
+    color: #666;
     font-weight: 500;
 }
-html,
-body {
-  position: relative;
-  height: 100%;
+
+.offcanvas .nav-tabs .nav-link.active {
+    color: #ff69b4;
+    border-bottom: 2px solid #ff69b4;
 }
 
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
+.offcanvas .tab-content {
+    padding: 15px 0;
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
+.offcanvas .nav-link {
+    padding: 10px 0;
+    transition: color 0.3s ease;
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.offcanvas .nav-link:hover {
+    color: #ff69b4;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* for tablet and laptop */
+@media screen and (min-width:500px) {
+    .hero_section img {
+        transition: .5s ease;
+        width: 50%;
+        height:500px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
 }
+
+/* for tablet */
+@media  screen and (max-width: 768px) {
+    .banner{
+        width: 95%;
+        display: flex;
+        align-items: center ;
+        justify-content: center ;
+        gap:1rem;
+    }
+    .roses{
+        /* display: none; */
+        max-width: 150px;
+    }
+    .gift-card-img{
+        width: 200px;
+    }
+    
+}
+/* for mobile */
+
+@media  screen and (max-width: 425px) {
+    .hero_section{
+        display: flex ;
+        flex-direction: column ;
+    }
+    .banner{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center ;
+        justify-content: center ;
+        gap:1rem;
+    }
+    .banner_containar{
+        gap: 1rem;
+        padding-right: 4rem;
+    }
+    .banner-text{
+        width: 500px !important;
+        font-size: 24px;
+    }
+    .shop-button{
+        width: 200px !important;
+        font-size: 15px;
+    
+    }
+    .roses{
+        /* display: none; */
+        max-width: 100px;
+    }
+    .gift-card-img{
+        width: 250px;
+    }
+    }

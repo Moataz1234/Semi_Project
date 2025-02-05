@@ -1,0 +1,21 @@
+/* footer style*/
+.social-icons img {
+    width: 30px;
+    border-radius: 50%;
+}
+.last_footer {
+    background-color: #f2f2f2 ;
+}
+
+.accordion-button::after {
+    filter: invert(33%) sepia(68%) saturate(593%) hue-rotate(295deg) brightness(94%) contrast(95%);
+}
+
+.accordion-button.collapsed::after {
+    transform: rotate(0deg);
+}
+
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg);
+    color: pink; /* Ensures it stays pink when expanded */
+}

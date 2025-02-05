@@ -1,0 +1,42 @@
+a {
+    text-decoration: none;
+}
+
+.Shop_by_Fragrance {
+    color: #003971;
+    position: absolute;
+    right: 10rem;
+}
+
+.nav-link:hover {
+    color: #fc8fa7;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.icon {
+    filter: invert(57%) sepia(10%) saturate(1233%) hue-rotate(300deg) brightness(100%) contrast(100%);
+}
+
+.header_2 {
+    position: relative;
+}
+.recomandition-header , .first_nav{
+    background-color: #ece7e7;
+}
+footer a:hover {
+    color: #fc8fa7 !important;
+    font-weight: 500;
+}
+@media only screen and (max-width: 800px) {
+    .logo {
+        width: 150px;
+    }
+    .category_header{
+        display: none !important;
+    }
+}

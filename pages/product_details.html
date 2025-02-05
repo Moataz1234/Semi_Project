@@ -9,9 +9,13 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./assets/styles/global.css">
-    <link rel="stylesheet" href="./assets/styles/index.css">
-    <link rel="stylesheet" href="./assets/styles/product_details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../assets/styles/global.css">
+    <link rel="stylesheet" href="../assets/styles/index.css">
+    <link rel="stylesheet" href="../assets/styles/navbar.css">
+    <link rel="stylesheet" href="../assets/styles/footer.css">
+    <link rel="stylesheet" href="../assets/styles/product_details.css">
+    <link rel="stylesheet" href="../assets/styles/animation.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100 gap-5">
@@ -69,11 +73,11 @@
     </header>
 
     <!-- Product Details Section -->
-    <section class="product-details container my-5">
+    <!-- <section class="product-details container my-5">
         <div class="row">
             <div class="col-md-6">
                 <div class="magnify-container">
-                    <img src="./assets/imgs/home_images/red.jfif" alt="Product Image" class="magnify-image">
+                    <img src="../assets/imgs/home_images/product_3.jfif" alt="Product Image" class="magnify-image">
                     <div class="magnify-glass"></div>
                 </div>
                 </div>
@@ -95,6 +99,67 @@
             </div>
         </div>
     </section>
+     -->
+     <section class="product-details container my-5">
+        <div class="row">
+            <!-- Image Section -->
+            <div class="col-md-6 text-center">
+                <div class="magnify-container">
+                    <img src="../assets/imgs/home_images/product_3.jfif" alt="Product Image" class="magnify-image">
+                    <div class="magnify-glass"></div>
+                </div>
+
+            </div>
+    
+            <!-- Details Section -->
+            <div class="col-md-6">
+                <h2 class="fw-bold">GINGHAM LOVE</h2>
+                <p class="text-muted">Shower Gel</p>
+                
+                <!-- Pricing -->
+                <p class="fs-4">
+                    <span class="text-decoration-line-through text-muted">EGP 895</span>
+                    <span class="text-danger fw-bold">EGP 545</span>
+                </p>
+                <p class="text-primary">5 for EGP 2295</p>
+    
+                <!-- Rating -->
+                <div class="d-flex align-items-center">
+                    <span class="text-warning">★★★★★</span>
+                    <span class="ms-2">(134) <a href="#" class="text-decoration-none">Write a review</a></span>
+                </div>
+    
+                <!-- Quantity and Add to Bag -->
+                <div class="my-3 d-flex align-items-center">
+                    <label for="quantity" class="me-2">Quantity:</label>
+                    <select id="quantity" class="form-select w-auto">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <button class="button btn btn-dark w-100">ADD TO BAG</button>
+    
+                <hr>
+    
+                <!-- Product Description -->
+                <h5>Product Description</h5>
+                <p>What it smells like: love at first sight—sweet, warm, happy and playfully romantic.</p>
+                <p><strong>Fragrance notes:</strong> Sugared red berries, blushing freesia, and rose meringue.</p>
+    
+                <hr>
+    
+                <!-- Delivery Options -->
+                <h5>Delivery Options</h5>
+                <ul class="list-unstyled">
+                    <li>🚚 <strong>Home Delivery:</strong> Free on orders above EGP 999. Delivered within 2-5 days.</li>
+                    <li>🏬 <strong>Click & Collect:</strong> Available in-store within 2-5 days.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
     <div class="products-section container">
         <h2 class="text-center mb-4">Recommend Products</h2>
         <swiper-container class="mySwiper" navigation="true" pagination="true" loop="true" slides-per-view="1"
@@ -153,47 +218,163 @@
             </swiper-slide>
         </swiper-container>
     </div>
-    <!-- Comments Section -->
-<section class="comments container my-5">
-    <h2 class="fw-bold mb-4">Customer Reviews</h2>
-    <div class="row">
-        <div class="col-md-8">
-            <!-- Comment Form -->
-            <form class="mb-5">
-                <div class="mb-3">
-                    <label for="comment" class="form-label">Leave a Review</label>
-                    <textarea class="form-control" id="comment" rows="3" placeholder="Write your review here..."></textarea>
+    <!-- Reviews Section -->
+     
+<section class="my-5">
+    <div class="bg-light p-4">
+    <div class="container ratings-overview mb-4">
+        <!-- Average Rating Header -->
+         <h2 class=" mb-4">Ratings & Reviews</h2>
+        <div class="d-flex align-items-center justify-content-between gap-2 mb-3">
+            <div class="stars">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <span class="h4 mb-0">4.7</span>
+            </div>
+            <button class="btn btn-dark col-6 mt-3">Write a review</button>
+        </div>
+        <!-- Rating Bars -->
+         <div class="rating d-flex align-items-center justify-content-between mb-3 ">
+        <div class="rating-bars d col-6">
+            <div class="rating-bar d-flex align-items-center mb-2">
+                <span class="me-2" style="min-width: 60px;">5 stars</span>
+                <div class="progress flex-grow-1" style="height: 12px;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit Review</button>
-            </form>
+                <span class="ms-2">114</span>
+            </div>
+            <div class="rating-bar d-flex align-items-center mb-2">
+                <span class="me-2" style="min-width: 60px;">4 stars</span>
+                <div class="progress flex-grow-1" style="height: 12px;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 10%;" aria-valuenow="10" aria-valuemax="100"></div>
+                </div>
+                <span class="ms-2">13</span>
+            </div>
+            <div class="rating-bar d-flex align-items-center mb-2">
+                <span class="me-2" style="min-width: 60px;">3 stars</span>
+                <div class="progress flex-grow-1" style="height: 12px;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 50%;" aria-valuenow="10" aria-valuemax="100"></div>
+                </div>
+                <span class="ms-2">53</span>
+            </div>
+            <div class="rating-bar d-flex align-items-center mb-2">
+                <span class="me-2" style="min-width: 60px;">2 stars</span>
+                <div class="progress flex-grow-1" style="height: 12px;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 5%;" aria-valuenow="10" aria-valuemax="100"></div>
+                </div>
+                <span class="ms-2">5</span>
+            </div>
+            <div class="rating-bar d-flex align-items-center mb-2">
+                <span class="me-2" style="min-width: 60px;">1 stars</span>
+                <div class="progress flex-grow-1" style="height: 12px;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 25%;" aria-valuenow="10" aria-valuemax="100"></div>
+                </div>
+                <span class="ms-2">30</span>
+            </div>
+        </div>
 
-            <!-- Existing Comments -->
-            <div class="comment-list">
-                <div class="comment mb-4">
-                    <div class="d-flex align-items-center mb-2">
-                        <img src="./assets/imgs/user.png" alt="User" width="40" class="rounded-circle me-3">
-                        <div>
-                            <h6 class="fw-bold mb-0">Yasmin Ahmed</h6>
-                            <small class="text-muted">January 15, 2024</small>
-                        </div>
-                    </div>
-                    <p class="mb-0">This product is amazing! Highly recommend it.</p>
+            <div class="price-value mt-4">
+                <span class="fw-bold">Price value:</span>
+                <div class="stars d-inline-block ms-2">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
                 </div>
-                <div class="comment mb-4">
-                    <div class="d-flex align-items-center mb-2">
-                        <img src="./assets/imgs/user.png" alt="User" width="40" class="rounded-circle me-3">
-                        <div>
-                            <h6 class="fw-bold mb-0">Nancy Mohamed</h6>
-                            <small class="text-muted">January 10, 2024</small>
-                        </div>
-                    </div>
-                    <p class="mb-0">Great quality and fast delivery. Will buy again!</p>
+                <span>4.4</span>
+            </div>
+        </div>
+
+        <!-- Price Value Rating -->
+       
+            <!-- Filter Section -->
+
+        <div class="filter-section mb-4">
+            <h6 class="mb-3">Filter + Sort</h6>
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <select class="form-select">
+                        <option>Sort by</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select">
+                        <option>Rating</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select">
+                        <option>Age</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select">
+                        <option>Location</option>
+                    </select>
                 </div>
             </div>
         </div>
     </div>
-</section>
+    </div>
 
+
+    <!-- Reviews List -->
+    <div class="reviews-list container">
+        <div class="review-item mb-4">
+            <div class="reviewer-info mb-2">
+                <h6 class="mb-1">Aiswarya</h6>
+                <small class="text-muted">Age: 25-34</small>
+            </div>
+            <div class="stars mb-2">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+            </div>
+            <h6 class="review-title mb-1">Very great fragrance</h6>
+            <p class="review-date text-muted small mb-2">Jan 23, 2023</p>
+            <p class="review-text mb-2">Very great fragrance</p>
+            
+            <!-- Review Actions -->
+            <div class="review-actions">
+                <span class="me-3">Was this review helpful?</span>
+                <button class="btn btn-sm btn-outline-secondary me-2">Yes (0)</button>
+                <button class="btn btn-sm btn-outline-secondary me-2">No (0)</button>
+                <button class="btn btn-sm btn-link text-muted">Report</button>
+            </div>
+        </div>
+        <div class="review-item mb-4">
+            <div class="reviewer-info mb-2">
+                <h6 class="mb-1">Aiswarya</h6>
+                <small class="text-muted">Age: 25-34</small>
+            </div>
+            <div class="stars mb-2">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+            </div>
+            <h6 class="review-title mb-1">Very great fragrance</h6>
+            <p class="review-date text-muted small mb-2">Jan 23, 2023</p>
+            <p class="review-text mb-2">Very great fragrance</p>
+            
+            <!-- Review Actions -->
+            <div class="review-actions">
+                <span class="me-3">Was this review helpful?</span>
+                <button class="btn btn-sm btn-outline-secondary me-2">Yes (0)</button>
+                <button class="btn btn-sm btn-outline-secondary me-2">No (0)</button>
+                <button class="btn btn-sm btn-link text-muted">Report</button>
+            </div>
+        </div>
+    </div>
+</section>
+<hr style="height:3px;color:#ff69b4;background-color:#ff69b4;">
     <!-- Footer (Same as index.html) -->
     <footer class="container-fluid py-5">
         <div class="container">
