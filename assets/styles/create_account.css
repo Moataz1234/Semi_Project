@@ -1,0 +1,38 @@
+.form_container {
+    max-width: 800px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.btn-dark {
+    width: 100%;
+    border-radius: 0;
+}
+
+.divider {
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.social-btn {
+    width: 100%;
+    text-align: left;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+}
+
+.social-btn img {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.small-text {
+    font-size: 0.9em;
+}

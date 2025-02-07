@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ميميز</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/styles/global.css">
+    <link rel="stylesheet" href="./assets/styles/navbar.css">
+    <link rel="stylesheet" href="./assets/styles/footer.css">
+    <link rel="stylesheet" href="./assets/styles/index.css">
+    <link rel="stylesheet" href="./assets/styles/animation.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <div class="loader-container">
+        <img src="./assets/imgs/Logo/meemiis.png" width="150" alt="شعار" class="loader">
+    </div>
+    <!-- Header -->
+    <header class="position-relative">
+        <!-- Top Navbar -->
+        <nav class="first_nav d-none d-lg-flex justify-content-center gap-3 py-2">
+            <a href="./pages/createAccount.html" class="nav-link text-pink">إنشاء حساب</a>
+            <a href="./pages/Login.html" class="nav-link text-pink">تسجيل الدخول</a>
+            <a href="./pages/contact.html" class="nav-link text-pink">اتصل بنا</a>
+            <a href="./index.html" class="nav-link text-pink">English</a>
+            <a class="nav-link Shop_by_Fragrance" href="./pages/products.html">تسوق حسب العطر</a>
+        </nav>
+
+        <div class="offcanvas offcanvas-start" id="offcanvasMenu">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">القائمة</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="shop-tab" data-bs-toggle="tab" data-bs-target="#shop" type="button"
+                            role="tab">تسوق</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="signin-tab" data-bs-toggle="tab" data-bs-target="#signin"
+                            type="button" role="tab">تسجيل الدخول</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade" id="shop" role="tabpanel">
+                        <ul class="list-unstyled mt-3">
+                            <li><a href="./pages/products.html" class="nav-link">أفضل العروض</a></li>
+                            <li><a href="./pages/products.html" class="nav-link">العناية بالجسم</a></li>
+                            <li><a href="./pages/products.html" class="nav-link">الهدايا</a></li>
+                            <li><a href="./pages/products.html" class="nav-link">الشموع</a></li>
+                            <li><a href="./pages/products.html" class="nav-link">صابون اليدين</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="signin" role="tabpanel">
+                        <ul class="list-unstyled mt-3">
+                            <li><a href="./pages/Login.html" class="nav-link">تسجيل الدخول</a></li>
+                            <li><a href="./pages/createAccount.html" class="nav-link">إنشاء حساب</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navbar -->
+        <div class="main_nav container header_2 d-flex flex-column-reverse flex-lg-row align-items-center p-3">
+            <div class="search-container d-flex align-items-center border rounded p-2 w-100 mt-3 mt-lg-0">
+                <input type="text" placeholder="البحث">
+                <img class="icon search_icon" src="./assets/imgs/header/search-icon.png" alt="بحث" width="20">
+            </div>
+
+            <div class="d-flex align-items-center justify-content-around w-100">
+                <img src="./assets/imgs/header/burger-bar.png" width="30" alt="قائمة" class="icon d-lg-none"
+                    data-bs-toggle="offcanvas" href="#offcanvasMenu">
+                <a class="" href="./index_ar.html"><img src="./assets/imgs/Logo/meemiis.png" width="150" alt="شعار"></a>
+                <div class="icons d-flex gap-3">
+                    <img class="icon" src="./assets/imgs/header/heart.png" alt="المفضلة" width="30">
+                    <img class="icon" src="./assets/imgs/header/shopping-bag.png" alt="السلة" width="30">
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Navbar -->
+        <nav class="category_header position-relative">
+            <div class="d-flex justify-content-center align-items-center gap-5 py-3">
+                <a href="#today_offers" class="nav-link text-pink category-link" data-category="offers">أفضل العروض</a>
+                <a href="./pages/products.html" class="nav-link text-pink category-link"
+                    data-category="bodycare">العناية بالجسم</a>
+                <a href="./pages/products.html" class="nav-link text-pink category-link"
+                    data-category="candles">الشموع</a>
+                <a href="./pages/products.html" class="nav-link text-pink category-link" data-category="soaps">صابون
+                    اليدين</a>
+                <a href="./pages/products.html" class="nav-link text-pink category-link"
+                    data-category="gifts">الهدايا</a>
+            </div>
+
+            <!-- Dropdown menus -->
+            <div class="category-dropdown" id="candles-dropdown">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>جميع الشموع</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="./pages/products.html">عروض اليوم</a></li>
+                                <li><a href="./pages/products.html">تخفيضات</a></li>
+                                <li><a href="./pages/products.html">عروض التوفير</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-dropdown" id="bodycare-dropdown">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>الاستحمام والعناية</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="./pages/products.html">غسول الجسم</a></li>
+                                <li><a href="./pages/products.html">مقشرات</a></li>
+                                <li><a href="./pages/products.html">قنابل الاستحمام</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>المرطبات</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="./pages/products.html">لوشن الجسم</a></li>
+                                <li><a href="./pages/products.html">كريم الجسم</a></li>
+                                <li><a href="./pages/products.html">كريم اليدين</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Recommendation Header -->
+        <div class="recomandition-header d-lg-flex d-none justify-content-center align-items-center gap-5 py-3">
+            <a href="./pages/products.html" class="text-pink"><span style="font-weight: 900;">التوصيل في نفس
+                    اليوم</span> متاح الآن</a>
+            <a href="./pages/products.html" class="text-pink"><span style="font-weight: 900;">حمّل</span> تطبيقنا</a>
+            <a href="./pages/products.html" class="text-pink"><span style="font-weight: 900;">تسوق</span> الهدايا
+                الآن</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <a href="./pages/products.html" class="hero_section d-flex justify-content-around">
+        <img src="./assets/imgs/home_images/sale3.png" alt="صورة العرض">
+        <img src="./assets/imgs/home_images/hero.jpg" alt="صورة رئيسية">
+    </a>
+
+    <!-- Today's Top Offers -->
+    <div class="today-section container" id="today_offers">
+        <h2 class="text-center mb-4">أفضل عروض اليوم</h2>
+        <swiper-container class="mySwiper" navigation="true" pagination="true" loop="true" slides-per-view="1"
+            space-between="30" breakpoints='{
+            "640": {"slidesPerView": 2, "spaceBetween": 30},
+            "1024": {"slidesPerView": 4, "spaceBetween": 30}
+        }'>
+            <swiper-slide>
+                <div class="today-card">
+                    <div class="offer-title">منتجات العناية بالجسم المختارة</div>
+                    <div class="offer-price">5 قطع بـ 2295 جنيه</div>
+                    <button onclick="location.href='./pages/products.html'" id="shop_now"
+                        class="btn-shop-now button">تسوق الآن</button>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="today-card">
+                    <div class="offer-title">منتجات العناية بالجسم بحجم السفر</div>
+                    <div class="offer-price">اشترِ 2 واحصل على 1 مجاناً</div>
+                    <button onclick="location.href='./pages/products.html'" id="shop_now"
+                        class="btn-shop-now button">تسوق الآن</button>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="today-card">
+                    <div class="offer-title">شموع بفتيل واحد</div>
+                    <div class="offer-price">اشترِ 2 واحصل على 1 مجاناً</div>
+                    <button onclick="location.href='./pages/products.html'" id="shop_now"
+                        class="btn-shop-now button">تسوق الآن</button>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="today-card">
+                    <div class="offer-title">شموع كبيرة</div>
+                    <div class="offer-price">اشترِ 2 واحصل على 1 مجاناً</div>
+                    <button onclick="location.href='./pages/products.html'" id="shop_now"
+                        class="btn-shop-now button">تسوق الآن</button>
+                </div>
+            </swiper-slide>
+        </swiper-container>
+    </div>
+
+    <!-- Featured Categories -->
+    <section class="featured-categories container my-5">
+        <div class="row text-center d-flex justify-content-center">
+            <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+                <div class="card border-0">
+                    <img height="500px" src="./assets/imgs/home_images/Pefrumes.jpg"
+                        class="card-img-top rounded border border-black" alt="العطور">
+                    <div class="card-body">
+                        <p class="card-text">طريقتك المفضلة للتعطير!</p>
+                        <a href="#" class="btn btn-link text-uppercase fw-bold text-pink">تسوق العناية بالجسم</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+                <div class="card border-0">
+                    <img height="500px" src="./assets/imgs/home_images/hand soap.jpg"
+                        class="card-img-top rounded border border-black" alt="صابون اليدين">
+                    <div class="card-body">
+                        <p class="card-text">كل ما تحتاجه لتترك يديك نظيفة ومعتنى بها</p>
+                        <a href="#" class="btn btn-link text-uppercase fw-bold text-pink">تسوق صابون اليدين</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+                <div class="card border-0">
+                    <img height="500px" src="./assets/imgs/home_images/candles.jpg"
+                        class="card-img-top rounded border border-black" alt="الشموع">
+                    <div class="card-body">
+                        <p class="card-text">زين كل غرفة بالعطور</p>
+                        <a href="#" class="btn btn-link text-uppercase fw-bold text-pink">تسوق الشموع ثلاثية الفتيل</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+                <div class="card border-0">
+                    <img height="500px" src="./assets/imgs/home_images/aromatherapy.jpg"
+                        class="card-img-top rounded border border-black" alt="العلاج بالروائح">
+                    <div class="card-body">
+                        <p class="card-text">خلاصات العلاج العطري الجديدة.</p>
+                        <a href="#" class="btn btn-link text-uppercase fw-bold text-pink">تسوق العلاج العطري</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- قسم المنتجات -->
+            <div class="products-section container">
+                <h2 class="text-center mb-4">الأكثر مبيعًا</h2>
+                <swiper-container class="mySwiper" navigation="true" pagination="true" loop="true" slides-per-view="1"
+                    space-between="30" breakpoints='{
+                    "640": {"slidesPerView": 2, "spaceBetween": 30},
+                    "1024": {"slidesPerView": 4, "spaceBetween": 30}
+                }'>
+                    <swiper-slide>
+                        <div class="product-card">
+                            <a href="./pages/product_details.html"> <img src="./assets/imgs/products/product_3.jfif"
+                                    alt="المنتج 1" class="card-img-top rounded"></a>
+                            <div class="card-body text-center">
+                                <div class="product-title fw-bold">جل استحمام جينغهام لوف</div>
+                                <div class="product-price text-pink fw-bold">ج.م 895</div>
+                                <span style="color: red;">اشترِ 2 واحصل على 1 مجانًا</span>
+                                <button class="btn btn-primary w-100 mt-2">أضف إلى الحقيبة</button>
+                            </div>
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="product-card">
+                            <a href="./pages/product_details.html"><img src="./assets/imgs/products/product_1.jpg"
+                                    alt="المنتج 2" class="card-img-top rounded"></a>
+                            <div class="card-body text-center">
+                                <div class="product-title fw-bold">شمعة أوكالبتوس بالنعناع ثلاثية الفتائل</div>
+                                <div class="product-price text-pink fw-bold">ج.م 1895</div>
+                                <span style="color: red;">اشترِ 4 واحصل على 1 مجانًا</span>
+                                <button class="btn btn-primary w-100 mt-2">أضف إلى الحقيبة</button>
+                            </div>
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="product-card">
+                            <a href="./pages/product_details.html"> <img src="./assets/imgs/products/product_2.jpeg"
+                                    alt="المنتج 3" class="card-img-top rounded"></a>
+                            <div class="card-body text-center">
+                                <div class="product-title fw-bold">ليمون المطبخ</div>
+                                <div class="product-price text-pink fw-bold">ج.م 599</div>
+                                <span style="color: red;">اشترِ 1 واحصل على 1 مجانًا</span>
+                                <button class="btn btn-primary w-100 mt-2">أضف إلى الحقيبة</button>
+                            </div>
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="product-card">
+                            <a href="./pages/product_details.html"> <img src="./assets/imgs/products/product_4.jpeg"
+                                    alt="المنتج 4" class="card-img-top rounded"></a>
+                            <div class="card-body text-center">
+                                <div class="product-title fw-bold">إن ذا ستارز</div>
+                                <div class="product-price text-pink fw-bold">ج.م 1099</div>
+                                <span style="color: red;">اشترِ 3 واحصل على 1 مجانًا</span>
+                                <button class="btn btn-primary w-100 mt-2">أضف إلى الحقيبة</button>
+                            </div>
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="product-card">
+                            <a href="./pages/product_details.html"> <img src="./assets/imgs/products/product_5.jpeg"
+                                    alt="المنتج 5" class="card-img-top rounded"></a>
+                            <div class="card-body text-center">
+                                <div class="product-title fw-bold">آت ذا بيتش</div>
+                                <div class="product-price text-pink fw-bold">ج.م 1499</div>
+                                <span style="color: red;">اشترِ 3 واحصل على 2 مجانًا</span>
+                                <button class="btn btn-primary w-100 mt-2">أضف إلى الحقيبة</button>
+                            </div>
+                        </div>
+                    </swiper-slide>
+                </swiper-container>
+            </div>
+            <!-- نهاية قسم المنتجات -->
+
+            <!-- قسم البانر -->
+            <section class="banner-section d-flex flex-column align-items-center pt-5">
+                <div class="banner d-flex align-items-center">
+                    <div class="banner_containar col-6 d-flex flex-column align-items-center">
+                        <div class="banner-text">
+                            لأنه عندما يكون<br>
+                            التسوق هو الهدية!
+                        </div>
+                        <a href="#" class="shop-button col-lg-8 col-md-12">تسوق بطاقات eGIFT</a>
+                    </div>
+
+                    <img src="./assets/imgs/footer/test_gift-removebg-preview.png" height="200" alt="بطاقة هدية"
+                        class="gift-card-img">
+                    <img src="./assets/imgs/footer/flowers.png" alt="وردة" class="roses rose-left">
+                    <img src="./assets/imgs/footer/flowers_2.png" alt="وردة" class="roses rose-right">
+                </div>
+
+                <div class="container my-5 text-center">
+                    <h2>باث أند بودي ووركس</h2>
+                    <p class="mt-3">
+                        باث أند بودي ووركس هو وجهتك المثالية للهدايا والمستلزمات التي تبهر وتبهج. من العطور المنعشة
+                        إلى العناية بالبشرة المهدئة، نحن نجعل من البحث عن شيء مميز تجربة ممتعة ومليئة بالذكريات.
+                        أوه! وبينما تتصفح، استكشف أحدث وأروع مجموعتنا من اللوشنات والصابون والشموع!
+                    </p>
+                </div>
+            </section>
+
+            <hr style="height: 3px ; color: #ff69b4 ; background-Color: #ff69b4 " />
+
+            <footer class="">
+                <div class="container">
+                    <!-- التبويبات في الهاتف المحمول -->
+                    <div class="d-md-none footer-tabs">
+                        <div class="accordion" id="footerAccordion">
+                            <!-- قسم التسوق حسب الفئة -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#shopBy">
+                                        التسوق حسب الفئة
+                                    </button>
+                                </h2>
+                                <div id="shopBy" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled">
+                                            <li><a href="#" class="text-decoration-none text-dark">أفضل العروض</a></li>
+                                            <li><a href="#" class="text-decoration-none text-dark">العناية بالجسم</a></li>
+                                            <li><a href="#" class="text-decoration-none text-dark">الشموع</a></li>
+                                            <li><a href="#" class="text-decoration-none text-dark">صابون اليدين</a></li>
+                                            <li><a href="#" class="text-decoration-none text-dark">الهدايا</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- قسم اكتشف -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#discover">
+                                        اكتشف
+                                    </button>
+                                </h2>
+                                <div id="discover" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled">
+                                            <li><a href="#" class="text-decoration-none text-dark">قصتنا</a></li>
+                                            <li><a href="#" class="text-decoration-none text-dark">معلومات التوصيل</a></li>
+                                            <li><a href="#" class="text-decoration-none text-dark">الشروط والأحكام</a></li>
+                                            <li><a href="#" class="text-decoration-none text-dark">سياسة الخصوصية</a></li>
+                                            <li><a href="#" class="text-decoration-none text-dark">الإرجاع والاسترداد</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- قسم خدمة العملاء -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#customerCare">
+                                        خدمة العملاء
+                                    </button>
+                                </h2>
+                                <div id="customerCare" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled">
+                                            <li><a href="#" class="text-decoration-none text-dark">الأسئلة الشائعة</a></li>
+                                            <li><a href="#" class="text-decoration-none text-dark">اتصل بنا</a></li>
+                                            <li><a href="#" class="text-decoration-none text-dark">موقع المتاجر</a></li>
+                                            <li><a href="#" class="text-decoration-none text-dark">خريطة الموقع</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- وسائل التواصل الاجتماعي -->
+                        <div class="col-md-3">
+                            <h5>تواصل معنا</h5>
+                            <div class="social-icons">
+                                <a href="http://web.facebook.com/"> <img src="./assets/imgs/footer/facebook.png" alt="فيسبوك"></a>
+                                <a href="http://instgram.com/"> <img src="./assets/imgs/footer/instgram.jpeg" alt="إنستغرام"></a>
+                                <a href="http://X.com/"> <img src="./assets/imgs/footer/X.png" alt="إكس"></a>
+                                <a href="http://youtube.com/"> <img src="./assets/imgs/footer/youtube.jpeg" alt="يوتيوب"></a>
+                            </div>
+                            <div class="mt-4 d-flex flex-column gap-3">
+                                <h6>احصل على أحدث العروض الإخبارية من باث أند بودي ووركس</h6>
+                                <div class="input-group mt-2">
+                                    <input type="email" class="form-control" placeholder="أدخل بريدك الإلكتروني">
+                                    <button class="btn btn-dark">اشترك</button>
+                                </div>
+                                <img src="./assets/imgs/footer/test.jpg" alt="صورة اختبار">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- الفوتر في سطح المكتب -->
+                <div class="container row d-none d-md-flex">
+                    <div class="col-md-3">
+                        <h5>التسوق حسب الفئة</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="./pages/products.html" class="text-decoration-none text-dark">أفضل العروض</a></li>
+                            <li><a href="./pages/products.html" class="text-decoration-none text-dark">العناية بالجسم</a></li>
+                            <li><a href="./pages/products.html" class="text-decoration-none text-dark">الشموع</a></li>
+                            <li><a href="./pages/products.html" class="text-decoration-none text-dark">صابون اليدين</a></li>
+                            <li><a href="./pages/products.html" class="text-decoration-none text-dark">الهدايا</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>اكتشف</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none text-dark">قصتنا</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark">معلومات التوصيل</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark">الشروط والأحكام</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark">سياسة الخصوصية</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark">الإرجاع والاسترداد</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>خدمة العملاء</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none text-dark">الأسئلة الشائعة</a></li>
+                            <li><a href="./pages/contact.html" class="text-decoration-none text-dark">اتصل بنا</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark">موقع المتاجر</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark">خريطة الموقع</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>تواصل معنا</h5>
+                        <div class="social-icons">
+                            <a href="http://web.facebook.com/"> <img src="./assets/imgs/footer/facebook.png" alt="فيسبوك"></a>
+                            <a href="http://instgram.com/"> <img src="./assets/imgs/footer/instgram.jpeg" alt="إنستغرام"></a>
+                            <a href="http://X.com/"> <img src="./assets/imgs/footer/X.png" alt="إكس"></a>
+                            <a href="http://youtube.com/"> <img src="./assets/imgs/footer/youtube.jpeg" alt="يوتيوب"></a>
+                        </div>
+                        <div class="mt-4 d-flex flex-column gap-3">
+                            <h6>اشترك للحصول على أحدث العروض والأخبار</h6>
+                            <div class="input-group mt-2">
+                                <input type="email" class="form-control" placeholder="أدخل بريدك الإلكتروني">
+                                <button class="btn btn-dark">اشترك</button>
+                            </div>
+                            <img src="./assets/imgs/footer/test.jpg" alt="صورة اختبار">
+                        </div>
+                    </div>
+                </div>
+            
+                <section class="last_footer">
+                    <div class="container">
+                        <div class="d-flex justify-content-between align-items-center flex-row-reverse flex-wrap">
+                            <div>
+                                <p class="text-muted">© باث أند بودي ووركس. جميع الحقوق محفوظة 2023</p>
+                            </div>
+                            <div class="col-6">
+                                <img src="./assets/imgs/footer/visa.png" width="80px" alt="فيزا">
+                                <img src="./assets/imgs/footer/mastercard.png" width="80px" alt="ماستر كارد">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </footer>
+            
+            <!-- end of footer -->
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+            <script src="./assets/scripts/nav.js">    </script>
+            <script src="./assets/scripts/loader.js"></script>
+</body>
+
+</html>

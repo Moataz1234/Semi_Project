@@ -16,55 +16,202 @@
     <link rel="stylesheet" href="../assets/styles/footer.css">
     <link rel="stylesheet" href="../assets/styles/product_details.css">
     <link rel="stylesheet" href="../assets/styles/animation.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-
-        .container {
-            max-width: 800px;
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-control {
-            border-radius: 0;
-        }
-
-        .btn-dark {
-            width: 100%;
-            border-radius: 0;
-        }
-
-        .divider {
-            border-top: 1px solid #ddd;
-            margin: 20px 0;
-        }
-
-        .social-btn {
-            width: 100%;
-            text-align: left;
-            border-radius: 0;
-            display: flex;
-            align-items: center;
-        }
-
-        .social-btn img {
-            height: 20px;
-            margin-right: 10px;
-        }
-
-        .small-text {
-            font-size: 0.9em;
-        }
-    </style>
-
+    <link rel="stylesheet" href="../assets/styles/create_account.css">
+   
 </head>
 
-<body>
-    <div class="container mt-5">
+<body class="d-flex flex-column min-vh-100 gap-5">
+    <div class="loader-container">
+        <img src="../assets/imgs/Logo/meemiis.png" width="150" alt="Logo" class="loader">
+    </div>
+    <!-- Header (Same as index.html) -->
+    <header class="position-relative ">
+        <!-- Top Navbar -->
+        <nav class="first_nav d-none d-lg-flex justify-content-center gap-3 py-2 ">
+            <a href="../pages/createAccount.html" class="nav-link text-pink">CREATE AN ACCOUNT</a>
+            <a href="../pages/Login.html" class="nav-link text-pink">SIGN IN</a>
+            <a href="../pages/contact.html" class="nav-link text-pink">Contact Us</a>
+            <a href="../index_ar.html" class="nav-link text-pink">العربية</a>
+            <a class="nav-link Shop_by_Fragrance" href="../pages/products.html">Shop by Fragrance</a>
+        </nav>
+
+        <div class="offcanvas offcanvas-start" id="offcanvasMenu">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="shop-tab" data-bs-toggle="tab" data-bs-target="#shop" type="button"
+                            role="tab">Shop</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="signin-tab" data-bs-toggle="tab" data-bs-target="#signin"
+                            type="button" role="tab">Sign In</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+
+                    <div class="tab-pane fade" id="shop" role="tabpanel">
+                        <ul class="list-unstyled mt-3">
+                            <li><a href="../pages/products.html" class="nav-link">Top offers</a></li>
+                            <li><a href="../pages/products.html" class="nav-link">Body care</a></li>
+                            <li><a href="../pages/products.html" class="nav-link">Gifts</a></li>
+                            <li><a href="../pages/products.html" class="nav-link">Candles</a></li>
+                            <li><a href="../pages/products.html" class="nav-link">Hand soaps</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="signin" role="tabpanel">
+                        <ul class="list-unstyled mt-3">
+                            <li><a href="./Login.html" class="nav-link">Sign in</a></li>
+                            <li><a href="./createAccount.html" class="nav-link">Create account</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Navbar -->
+        <!-- Main Navbar -->
+        <div class="main_nav container header_2 d-flex flex-column-reverse flex-lg-row align-items-center p-3">
+
+            <!-- Search Bar (First in Code, Last on Mobile) -->
+            <div class="search-container d-flex align-items-center border rounded p-2 w-100 mt-3 mt-lg-0">
+                <input type="text" placeholder="Search">
+                <img class="icon search_icon" src="../assets/imgs/header/search-icon.png" alt="Search" width="20">
+            </div>
+
+            <!-- Top Row: Offcanvas, Logo, Icons -->
+            <div class="d-flex align-items-center justify-content-around w-100">
+                <img src="../assets/imgs/header/burger-bar.png" width="30" alt="Menu" class="icon d-lg-none"
+                    data-bs-toggle="offcanvas" href="#offcanvasMenu">
+
+                <a class="" href="../index.html"><img src="../assets/imgs/Logo/meemiis.png" width="150" alt="Logo"></a>
+
+                <div class="icons d-flex gap-3">
+                    <img class="icon" src="../assets/imgs/header/heart.png" alt="Wishlist" width="30">
+                    <img class="icon" src="../assets/imgs/header/shopping-bag.png" alt="Cart" width="30">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Category Navbar -->
+        <nav class="category_header position-relative">
+            <div class="d-flex justify-content-center align-items-center gap-5 py-3">
+                <a href="#today_offers" class="nav-link text-pink category-link" data-category="offers">Top Offers</a>
+                <a href="../pages/products.html" class="nav-link text-pink category-link" data-category="bodycare">Body
+                    Care</a>
+                <a href="../pages/products.html" class="nav-link text-pink category-link"
+                    data-category="candles">Candles</a>
+                <a href="../pages/products.html" class="nav-link text-pink category-link" data-category="soaps">Hand
+                    Soaps</a>
+                <a href="../pages/products.html" class="nav-link text-pink category-link" data-category="gifts">Gifts</a>
+            </div>
+            <!-- Dropdown menus -->
+            <div class="category-dropdown" id="candles-dropdown">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>All candles</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="../pages/products.html">Daily Deals</a></li>
+                                <li><a href="../pages/products.html">Clearance</a></li>
+                                <li><a href="../pages/products.html">Bundle & Save</a></li>
+                            </ul>
+                        </div>
+                        <!-- <div class="col-md-3">
+                            <h5>Seasonal</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Spring Collection</a></li>
+                                <li><a href="#">Summer Essentials</a></li>
+                                <li><a href="#">Holiday Specials</a></li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-dropdown" id="bodycare-dropdown">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Bath & Shower</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="../pages/products.html">Body Wash</a></li>
+                                <li><a href="../pages/products.html">Scrubs</a></li>
+                                <li><a href="../pages/products.html">Bath Bombs</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Moisturizers</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="../pages/products.html">Body Lotion</a></li>
+                                <li><a href="../pages/products.html">Body Cream</a></li>
+                                <li><a href="../pages/products.html">Hand Cream</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category-dropdown animate animate__fadeInDown" id="soaps-dropdown">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Bath & Shower</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="../pages/products.html">Body Wash</a></li>
+                                <li><a href="../pages/products.html">Scrubs</a></li>
+                                <li><a href="../pages/products.html">Bath Bombs</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Moisturizers</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="../pages/products.html">Body Lotion</a></li>
+                                <li><a href="../pages/products.html">Body Cream</a></li>
+                                <li><a href="../pages/products.html">Hand Cream</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category-dropdown" id="gifts-dropdown">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Bath & Shower</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="../pages/products.html">Body Wash</a></li>
+                                <li><a href="../pages/products.html">Scrubs</a></li>
+                                <li><a href="../pages/products.html">Bath Bombs</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Moisturizers</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="../pages/products.html">Body Lotion</a></li>
+                                <li><a href="../pages/products.html">Body Cream</a></li>
+                                <li><a href="../pages/products.html">Hand Cream</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add similar dropdown structures for candles, soaps, and gifts -->
+        </nav>
+        <!-- recomandition-nav -->
+        <div class="recomandition-header d-lg-flex d-none justify-content-center align-items-center gap-5 py-3">
+            <a href="../pages/products.html" class=" text-pink"><span style="font-weight: 900;">Same day delivery</span>
+                is now avialable</a>
+            <a href="../pages/products.html" class=" text-pink"><span style="font-weight: 900;">Download</span> our
+                App</a>
+            <a href="../pages/products.html" class=" text-pink"><span style="font-weight: 900;">Shop </span> Gift now</a>
+        </div>
+    </header>
+    <div class="form_container container mt-5">
         <h2 class="text-center">Create An Account</h2>
         <div class="row mt-4">
             <!-- Left Section - Email Signup -->
@@ -123,6 +270,169 @@
             </div>
         </div>
     </div>
+    <hr style="height:3px;color:#ff69b4;background-color:#ff69b4;">
+
+    <footer class="">
+        <div class="container">
+            <!-- Mobile Tabs -->
+            <div class="d-md-none footer-tabs">
+                <div class="accordion" id="footerAccordion">
+                    <!-- Shop By Section -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#shopBy">
+                                Shop By
+                            </button>
+                        </h2>
+                        <div id="shopBy" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                            <div class="accordion-body">
+                                <ul class="list-unstyled">
+                                    <li><a href="./products.html" class="text-decoration-none text-dark">Top Offers</a></li>
+                                    <li><a href="./products.html" class="text-decoration-none text-dark">Body Care</a></li>
+                                    <li><a href="./products.html" class="text-decoration-none text-dark">Candles</a></li>
+                                    <li><a href="./products.html" class="text-decoration-none text-dark">Hand Soaps</a></li>
+                                    <li><a href="./products.html" class="text-decoration-none text-dark">Gifts</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Discover Section -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#discover">
+                                Discover
+                            </button>
+                        </h2>
+                        <div id="discover" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                            <div class="accordion-body">
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="text-decoration-none text-dark">Our Story</a></li>
+                                    <li><a href="#" class="text-decoration-none text-dark">Delivery Information</a></li>
+                                    <li><a href="#" class="text-decoration-none text-dark">Terms & Conditions</a></li>
+                                    <li><a href="#" class="text-decoration-none text-dark">Privacy Policy</a></li>
+                                    <li><a href="#" class="text-decoration-none text-dark">Returns & Refunds</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Customer Care Section -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#customerCare">
+                                Customer Care
+                            </button>
+                        </h2>
+                        <div id="customerCare" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                            <div class="accordion-body">
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="text-decoration-none text-dark">FAQs</a></li>
+                                    <li><a href="../pages/contact.html" class="text-decoration-none text-dark">Contact Us</a></li>
+                                    <li><a href="#" class="text-decoration-none text-dark">Store Locator</a></li>
+                                    <li><a href="#" class="text-decoration-none text-dark">Sitemap</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>Connect With Us</h5>
+                    <div class="social-icons">
+                        <a href="http://web.facebook.com/"> <img src="./assets/imgs/footer/facebook.png"
+                                alt="Facebook"></a>
+                        <a href="http://instgram.com/"> <img src="./assets/imgs/footer/instgram.jpeg"
+                                alt="Instagram"></a>
+                        <a href="http://X.com/"> <img src="./assets/imgs/footer/X.png" alt="X"></a>
+                        <a href="http://youtube.com/"> <img src="./assets/imgs/footer/youtube.jpeg" alt="YouTube"></a>
+                    </div>
+                    <div class="mt-4 d-flex flex-column  gap-3">
+                        <h6>Get email offers and the latest news from Bath & Body Works</h6>
+                        <div class="input-group mt-2">
+                            <input type="email" class="form-control" placeholder="Enter email address">
+                            <button class="btn btn-dark">SIGN UP</button>
+                        </div>
+                        <img src="./assets/imgs/footer/test.jpg" alt="test">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desktop Footer -->
+        <div class="container row d-none d-md-flex">
+            <div class="col-md-3">
+                <h5>Shop By</h5>
+                <ul class="list-unstyled">
+                    <li><a href="./products.html" class="text-decoration-none text-dark">Top Offers</a></li>
+                    <li><a href="./products.html" class="text-decoration-none text-dark">Body Care</a></li>
+                    <li><a href="./products.html" class="text-decoration-none text-dark">Candles</a></li>
+                    <li><a href="./products.html" class="text-decoration-none text-dark">Hand Soaps</a></li>
+                    <li><a href="./products.html" class="text-decoration-none text-dark">Gifts</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Discover</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none text-dark">Our Story</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark">Delivery Information</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark">Terms & Conditions</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark">Privacy Policy</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark">Returns & Refunds</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Customer Care</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none text-dark">FAQs</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark">Contact Us</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark">Store Locator</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Connect With Us</h5>
+                <div class="social-icons">
+                    <a href="http://web.facebook.com/"> <img src="../assets/imgs/footer/facebook.png" alt="Facebook"></a>
+                    <a href="http://instgram.com/"> <img src="../assets/imgs/footer/instgram.jpeg" alt="Instagram"></a>
+                    <a href="http://X.com/"> <img src="../assets/imgs/footer/X.png" alt="X"></a>
+                    <a href="http://youtube.com/"> <img src="../assets/imgs/footer/youtube.jpeg" alt="YouTube"></a>
+                </div>
+                <div class="mt-4 d-flex flex-column  gap-3">
+                    <h6>Get email offers and the latest news from Bath & Body Works</h6>
+                    <div class="input-group mt-2">
+                        <input type="email" class="form-control" placeholder="Enter email address">
+                        <button class="btn btn-dark">SIGN UP</button>
+                    </div>
+                    <img src="../assets/imgs/footer/test.jpg" alt="test">
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <section class="last_footer">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center flex-row-reverse flex-wrap">
+                    <div>
+                        <p class="text-muted">© Bath & Body Works. All Rights Reserved 2023</p>
+                    </div>
+                    <div class="col-6">
+                        <img src="../assets/imgs/footer/visa.png" width="80px" alt="test">
+                        <img src="../assets/imgs/footer/mastercard.png" width="80px" alt="test">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="../assets/scripts/loader.js"></script>
+    <script src="../assets/scripts/product_details.js"></script>
+    <script src="../assets/scripts/nav.js">    </script>
 
 </body>
 

@@ -19,3 +19,8 @@
     transform: rotate(180deg);
     color: pink; /* Ensures it stays pink when expanded */
 }
+
+footer a:hover {
+    color: #fc8fa7 !important;
+    font-weight: 500;
+}

@@ -10,33 +10,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/styles/global.css">
-    <link rel="stylesheet" href="./assets/styles/index.css">
     <link rel="stylesheet" href="./assets/styles/navbar.css">
     <link rel="stylesheet" href="./assets/styles/footer.css">
+    <link rel="stylesheet" href="./assets/styles/index.css">
     <link rel="stylesheet" href="./assets/styles/animation.css">
-
-    <style>
-
-    </style>
 </head>
-
-<body class="d-flex flex-column min-vh-100 gap-3 w-100">
+<body class="d-flex flex-column min-vh-100">
     <div class="loader-container">
         <img src="./assets/imgs/Logo/meemiis.png" width="150" alt="Logo" class="loader">
     </div>
     <!-- Header -->
-    <header class="position-relative ">
+    <header class="position-relative">
         <!-- Top Navbar -->
         <nav class="first_nav d-none d-lg-flex justify-content-center gap-3 py-2 ">
             <a href="./pages/createAccount.html" class="nav-link text-pink">CREATE AN ACCOUNT</a>
             <a href="./pages/Login.html" class="nav-link text-pink">SIGN IN</a>
-            <a href="./pages/about.html" class="nav-link text-pink">About</a>
             <a href="./pages/contact.html" class="nav-link text-pink">Contact Us</a>
-            <a href="#" class="nav-link text-pink">العربية</a>
-            <a class="nav-link Shop_by_Fragrance" href="#">Shop by Fragrance</a>
+            <a href="./index_ar.html" class="nav-link text-pink">العربية</a>
+            <a class="nav-link Shop_by_Fragrance" href="./pages/products.html">Shop by Fragrance</a>
         </nav>
-        <img src="./assets/imgs/header/burger-bar.png" width="30" alt="Menu" class="icon d-lg-none"
-            data-bs-toggle="offcanvas" href="#offcanvasMenu">
 
         <div class="offcanvas offcanvas-start" id="offcanvasMenu">
             <div class="offcanvas-header">
@@ -59,69 +51,79 @@
 
                     <div class="tab-pane fade" id="shop" role="tabpanel">
                         <ul class="list-unstyled mt-3">
-                            <li><a href="#" class="nav-link">Top offers</a></li>
-                            <li><a href="#" class="nav-link">Body care</a></li>
-                            <li><a href="#" class="nav-link">Gifts</a></li>
-                            <li><a href="#" class="nav-link">Candles</a></li>
-                            <li><a href="#" class="nav-link">Hand soaps</a></li>
+                            <li><a href="./pages/products.html" class="nav-link">Top offers</a></li>
+                            <li><a href="./pages/products.html" class="nav-link">Body care</a></li>
+                            <li><a href="./pages/products.html" class="nav-link">Gifts</a></li>
+                            <li><a href="./pages/products.html" class="nav-link">Candles</a></li>
+                            <li><a href="./pages/products.html" class="nav-link">Hand soaps</a></li>
                         </ul>
                     </div>
                     <div class="tab-pane fade" id="signin" role="tabpanel">
                         <ul class="list-unstyled mt-3">
-                            <li><a href="#" class="nav-link">Sign in</a></li>
-                            <li><a href="#" class="nav-link">Create account</a></li>
-                            <li><a href="#" class="nav-link">Contact us</a></li>
-                            <li><a href="#" class="nav-link">About</a></li>
+                            <li><a href="./pages/Login.html" class="nav-link">Sign in</a></li>
+                            <li><a href="./pages/createAccount.html" class="nav-link">Create account</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Main Navbar -->
-        <div class="main_nav container header_2 d-flex justify-content-between align-items-center p-3">
+        <!-- Main Navbar -->
+        <div class="main_nav container header_2 d-flex flex-column-reverse flex-lg-row align-items-center p-3">
 
-            <div class="search-container d-lg-flex align-items-center border rounded p-2 ">
+            <!-- Search Bar (First in Code, Last on Mobile) -->
+            <div class="search-container d-flex align-items-center border rounded p-2 w-100 mt-3 mt-lg-0">
                 <input type="text" placeholder="Search">
-                <img class="icon" src="./assets/imgs/header/search-icon.png" alt="Search" width="20">
+                <img class="icon search_icon" src="./assets/imgs/header/search-icon.png" alt="Search" width="20">
             </div>
 
-            <a href="./index.html"><img src="./assets/imgs/Logo/meemiis.png" width="150" alt="Logo"></a>
+            <!-- Top Row: Offcanvas, Logo, Icons -->
+            <div class="d-flex align-items-center justify-content-around w-100">
+                <img src="./assets/imgs/header/burger-bar.png" width="30" alt="Menu" class="icon d-lg-none"
+                    data-bs-toggle="offcanvas" href="#offcanvasMenu">
 
-            <div class="icons d-flex gap-3 ">
-                <img class="icon" src="./assets/imgs/header/heart.png" alt="Wishlist" width="30">
-                <img class="icon" src="./assets/imgs/header/shopping-bag.png" alt="Cart" width="30">
+                <a class="" href="./index.html"><img src="./assets/imgs/Logo/meemiis.png" width="150" alt="Logo"></a>
+
+                <div class="icons d-flex gap-3">
+                    <img class="icon" src="./assets/imgs/header/heart.png" alt="Wishlist" width="30">
+                    <img class="icon" src="./assets/imgs/header/shopping-bag.png" alt="Cart" width="30">
+                </div>
             </div>
         </div>
+
 
         <!-- Category Navbar -->
         <nav class="category_header position-relative">
             <div class="d-flex justify-content-center align-items-center gap-5 py-3">
-                <a href="#" class="nav-link text-pink category-link" data-category="offers">Top Offers</a>
-                <a href="#" class="nav-link text-pink category-link" data-category="bodycare">Body Care</a>
-                <a href="#" class="nav-link text-pink category-link" data-category="candles">Candles</a>
-                <a href="#" class="nav-link text-pink category-link" data-category="soaps">Hand Soaps</a>
-                <a href="#" class="nav-link text-pink category-link" data-category="gifts">Gifts</a>
+                <a href="#today_offers" class="nav-link text-pink category-link" data-category="offers">Top Offers</a>
+                <a href="./pages/products.html" class="nav-link text-pink category-link" data-category="bodycare">Body
+                    Care</a>
+                <a href="./pages/products.html" class="nav-link text-pink category-link"
+                    data-category="candles">Candles</a>
+                <a href="./pages/products.html" class="nav-link text-pink category-link" data-category="soaps">Hand
+                    Soaps</a>
+                <a href="./pages/products.html" class="nav-link text-pink category-link" data-category="gifts">Gifts</a>
             </div>
             <!-- Dropdown menus -->
-            <div class="category-dropdown" id="offers-dropdown">
+            <div class="category-dropdown" id="candles-dropdown">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
-                            <h5>Special Deals</h5>
+                            <h5>All candles</h5>
                             <ul class="list-unstyled">
-                                <li><a href="#">Daily Deals</a></li>
-                                <li><a href="#">Clearance</a></li>
-                                <li><a href="#">Bundle & Save</a></li>
+                                <li><a href="./pages/products.html">Daily Deals</a></li>
+                                <li><a href="./pages/products.html">Clearance</a></li>
+                                <li><a href="./pages/products.html">Bundle & Save</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-3">
+                        <!-- <div class="col-md-3">
                             <h5>Seasonal</h5>
                             <ul class="list-unstyled">
                                 <li><a href="#">Spring Collection</a></li>
                                 <li><a href="#">Summer Essentials</a></li>
                                 <li><a href="#">Holiday Specials</a></li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -132,17 +134,61 @@
                         <div class="col-md-3">
                             <h5>Bath & Shower</h5>
                             <ul class="list-unstyled">
-                                <li><a href="#">Body Wash</a></li>
-                                <li><a href="#">Scrubs</a></li>
-                                <li><a href="#">Bath Bombs</a></li>
+                                <li><a href="./pages/products.html">Body Wash</a></li>
+                                <li><a href="./pages/products.html">Scrubs</a></li>
+                                <li><a href="./pages/products.html">Bath Bombs</a></li>
                             </ul>
                         </div>
                         <div class="col-md-3">
                             <h5>Moisturizers</h5>
                             <ul class="list-unstyled">
-                                <li><a href="#">Body Lotion</a></li>
-                                <li><a href="#">Body Cream</a></li>
-                                <li><a href="#">Hand Cream</a></li>
+                                <li><a href="./pages/products.html">Body Lotion</a></li>
+                                <li><a href="./pages/products.html">Body Cream</a></li>
+                                <li><a href="./pages/products.html">Hand Cream</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category-dropdown animate animate__fadeInDown" id="soaps-dropdown">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Bath & Shower</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="./pages/products.html">Body Wash</a></li>
+                                <li><a href="./pages/products.html">Scrubs</a></li>
+                                <li><a href="./pages/products.html">Bath Bombs</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Moisturizers</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="./pages/products.html">Body Lotion</a></li>
+                                <li><a href="./pages/products.html">Body Cream</a></li>
+                                <li><a href="./pages/products.html">Hand Cream</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category-dropdown" id="gifts-dropdown">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Bath & Shower</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="./pages/products.html">Body Wash</a></li>
+                                <li><a href="./pages/products.html">Scrubs</a></li>
+                                <li><a href="./pages/products.html">Bath Bombs</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Moisturizers</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="./pages/products.html">Body Lotion</a></li>
+                                <li><a href="./pages/products.html">Body Cream</a></li>
+                                <li><a href="./pages/products.html">Hand Cream</a></li>
                             </ul>
                         </div>
                     </div>
@@ -153,16 +199,18 @@
         </nav>
         <!-- recomandition-nav -->
         <div class="recomandition-header d-lg-flex d-none justify-content-center align-items-center gap-5 py-3">
-            <a href="#" class=" text-pink"><span style="font-weight: 900;">Same day delivery</span> is now avialable</a>
-            <a href="#" class=" text-pink"><span style="font-weight: 900;">Download</span> our App</a>
-            <a href="#" class=" text-pink"><span style="font-weight: 900;">Shop </span> Gift now</a>
+            <a href="./pages/products.html" class=" text-pink"><span style="font-weight: 900;">Same day delivery</span>
+                is now avialable</a>
+            <a href="./pages/products.html" class=" text-pink"><span style="font-weight: 900;">Download</span> our
+                App</a>
+            <a href="./pages/products.html" class=" text-pink"><span style="font-weight: 900;">Shop </span> Gift now</a>
         </div>
     </header>
 
     <!-- Hero Section -->
     <!-- <div class="Home_page"> -->
     <!-- <div class=""> -->
-    <a href="./pages/contact.html" class="hero_section d-flex justify-content-around">
+    <a href="./pages/products.html" class="hero_section d-flex justify-content-around">
         <img src="./assets/imgs/home_images/sale3.png" alt="Hero Image">
         <img src="./assets/imgs/home_images/hero.jpg" alt="Hero Image">
         <!-- <img class="hero_section" src="./assets/imgs/home_images/hero_image.jpeg" alt="Hero Image"> -->
@@ -170,7 +218,7 @@
     <!-- </div> -->
     <!-- end of hero section -->
     <!-- Today's Top offer -->
-    <div class="today-section container">
+    <div class="today-section container" id="today_offers">
         <h2 class="text-center mb-4">TODAY'S TOP OFFERS</h2>
         <swiper-container class="mySwiper" navigation="true" pagination="true" loop="true" slides-per-view="1"
             space-between="30" breakpoints='{
@@ -181,35 +229,35 @@
                 <div class="today-card">
                     <div class="offer-title">Select Body Care</div>
                     <div class="offer-price">5 For EGP 2295</div>
-                    <button class="btn-shop-now button">SHOP NOW</button>
+                    <button onclick="location.href='./pages/products.html'" id="shop_now" class=" btn-shop-now button">SHOP NOW</button>
                 </div>
             </swiper-slide>
             <swiper-slide>
                 <div class="today-card">
                     <div class="offer-title">Travel Size Body Care</div>
                     <div class="offer-price">Buy 2 Get 1 Free</div>
-                    <button class="btn-shop-now   button">SHOP NOW</button>
+                    <button onclick="location.href='./pages/products.html'" id="shop_now" class=" btn-shop-now button">SHOP NOW</button>
                 </div>
             </swiper-slide>
             <swiper-slide>
                 <div class="today-card">
                     <div class="offer-title">Single Wick Candles</div>
                     <div class="offer-price">Buy 2 Get 1 Free</div>
-                    <button class="btn-shop-now   button">SHOP NOW</button>
+                    <button onclick="location.href='./pages/products.html'" id="shop_now" class=" btn-shop-now button">SHOP NOW</button>
                 </div>
             </swiper-slide>
             <swiper-slide>
                 <div class="today-card">
                     <div class="offer-title">Large Candles</div>
                     <div class="offer-price">Buy 2 Get 1 Free</div>
-                    <button class="btn-shop-now  button">SHOP NOW</button>
+                    <button onclick="location.href='./pages/products.html'" id="shop_now" class=" btn-shop-now button">SHOP NOW</button>
                 </div>
             </swiper-slide>
             <swiper-slide>
                 <div class="today-card">
                     <div class="offer-title">Large Candles</div>
                     <div class="offer-price">Buy 2 Get 1 Free</div>
-                    <button class="btn-shop-now button">SHOP NOW</button>
+                    <button onclick="location.href='./pages/products.html'" id="shop_now" class=" btn-shop-now button">SHOP NOW</button>
                 </div>
             </swiper-slide>
         </swiper-container>
@@ -284,17 +332,20 @@
             </swiper-slide>
             <swiper-slide>
                 <div class="product-card">
-                    <img src="./assets/imgs/products/product_1.jpg" alt="Product 2" class="card-img-top rounded">
+                    <a href="./pages/product_details.html"><img src="./assets/imgs/products/product_1.jpg"
+                            alt="Product 2" class="card-img-top rounded"></a>
                     <div class="card-body text-center">
-                        <div class="product-title fw-bold">Eucalyptus Mint three-Wick Candle</div>
+                        <div class="product-title fw-bold">Eucalyptus Mint 3-Wick Candle</div>
                         <div class="product-price text-pink fw-bold">EGP 1895</div>
+                        <span style="color: red;">Buy 4 get 1 free</span>
                         <button class="btn btn-primary w-100 mt-2">Add to Bag</button>
                     </div>
                 </div>
             </swiper-slide>
             <swiper-slide>
                 <div class="product-card">
-                    <img src="./assets/imgs/products/product_2.jpeg" alt="Product 3" class="card-img-top rounded">
+                    <a href="./pages/product_details.html"> <img src="./assets/imgs/products/product_2.jpeg"
+                            alt="Product 3" class="card-img-top rounded"></a>
                     <div class="card-body text-center">
                         <div class="product-title fw-bold">Kitchen Lemon</div>
                         <div class="product-price text-pink fw-bold">EGP 599</div>
@@ -305,7 +356,8 @@
             </swiper-slide>
             <swiper-slide>
                 <div class="product-card">
-                    <img src="./assets/imgs/products/product_4.jpeg" alt="Product 4" class="card-img-top rounded">
+                    <a href="./pages/product_details.html"> <img src="./assets/imgs/products/product_4.jpeg"
+                            alt="Product 4" class="card-img-top rounded"></a>
                     <div class="card-body text-center">
                         <div class="product-title fw-bold">In The Stars </div>
                         <div class="product-price text-pink fw-bold">EGP 1099</div>
@@ -316,7 +368,8 @@
             </swiper-slide>
             <swiper-slide>
                 <div class="product-card">
-                    <img src="./assets/imgs/products/product_5.jpeg " alt="Product 5" class="card-img-top rounded">
+                    <a href="./pages/product_details.html"> <img src="./assets/imgs/products/product_5.jpeg "
+                            alt="Product 5" class="card-img-top rounded"></a>
                     <div class="card-body text-center">
                         <div class="product-title fw-bold">At The Beach </div>
                         <div class="product-price text-pink fw-bold">EGP 1499</div>
@@ -329,7 +382,7 @@
     </div>
     <!-- end of products section -->
     <!-- Banner Section -->
-    <section class="banner-section d-flex flex-column align-items-center ">
+    <section class="banner-section d-flex flex-column align-items-center pt-5">
         <div class="banner d-flex  align-items-center ">
             <div class="banner_containar col-6 d-flex flex-column align-items-center">
                 <div class="banner-text">
@@ -366,7 +419,7 @@
     <hr style="height:3px;color:#ff69b4;background-color:#ff69b4;">
 
     <!-- Footer -->
-    <footer>
+    <footer class="">
         <div class="container">
             <!-- Mobile Tabs -->
             <div class="d-md-none footer-tabs">
@@ -456,15 +509,15 @@
         </div>
 
         <!-- Desktop Footer -->
-        <div class="row d-none d-md-flex">
+        <div class="container row d-none d-md-flex">
             <div class="col-md-3">
                 <h5>Shop By</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="text-decoration-none text-dark">Top Offers</a></li>
-                    <li><a href="#" class="text-decoration-none text-dark">Body Care</a></li>
-                    <li><a href="#" class="text-decoration-none text-dark">Candles</a></li>
-                    <li><a href="#" class="text-decoration-none text-dark">Hand Soaps</a></li>
-                    <li><a href="#" class="text-decoration-none text-dark">Gifts</a></li>
+                    <li><a href="./pages/products.html" class="text-decoration-none text-dark">Top Offers</a></li>
+                    <li><a href="./pages/products.html" class="text-decoration-none text-dark">Body Care</a></li>
+                    <li><a href="./pages/products.html" class="text-decoration-none text-dark">Candles</a></li>
+                    <li><a href="./pages/products.html" class="text-decoration-none text-dark">Hand Soaps</a></li>
+                    <li><a href="./pages/products.html" class="text-decoration-none text-dark">Gifts</a></li>
                 </ul>
             </div>
             <div class="col-md-3">
@@ -481,7 +534,7 @@
                 <h5>Customer Care</h5>
                 <ul class="list-unstyled">
                     <li><a href="#" class="text-decoration-none text-dark">FAQs</a></li>
-                    <li><a href="#" class="text-decoration-none text-dark">Contact Us</a></li>
+                    <li><a href="./pages/contact.html" class="text-decoration-none text-dark">Contact Us</a></li>
                     <li><a href="#" class="text-decoration-none text-dark">Store Locator</a></li>
                     <li><a href="#" class="text-decoration-none text-dark">Sitemap</a></li>
                 </ul>
@@ -521,14 +574,11 @@
             </div>
         </section>
 
-
     </footer>
     <!-- end of footer -->
-    <script src="./assets/scripts/loader.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="./assets/scripts/nav.js">    </script>
+    <script src="./assets/scripts/loader.js"></script>
 </body>
 
 </html>
