@@ -1,4 +1,3 @@
-
 .Home_page {
     display: flex;
     flex-direction: column;
@@ -21,13 +20,14 @@
     height: 433px;
 }
 
-.banner-text  {
+.banner-text {
     color: white;
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
     text-shadow: 5px 5px 2px rgba(230, 10, 94, 0.2);
 }
+
 .banner_containar {
     margin-left: 70px;
 
@@ -63,17 +63,20 @@
     right: 0;
     bottom: 0;
 }
+
 .banner_section {
     background-color: #003971;
 }
+
 /* product section */
-.product-card img{
+.product-card img {
     border: 1px solid #ddd;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     height: 300px;
 }
+
 /* dropdown list */
 
 .category_header {
@@ -97,7 +100,7 @@
     padding: 20px;
 }
 
-.category-link:hover + .category-dropdown,
+.category-link:hover+.category-dropdown,
 .category-dropdown:hover {
     opacity: 1;
     visibility: visible;
@@ -153,65 +156,123 @@
     .hero_section img {
         transition: .5s ease;
         width: 50%;
-        height:500px;
+        height: 500px;
         border: 2px solid #ddd;
         border-radius: 5px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
-    
+
 }
 
 /* for tablet */
-@media  screen and (max-width: 768px) {
-    .banner{
+@media screen and (max-width: 768px) {
+    .banner {
         width: 95%;
         display: flex;
-        align-items: center ;
-        justify-content: center ;
-        gap:1rem;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
     }
-    .roses{
+
+    .roses {
         /* display: none; */
         max-width: 150px;
     }
-    .gift-card-img{
+
+    .gift-card-img {
         width: 200px;
     }
-    
+
 }
+
 /* for mobile */
 
-@media  screen and (max-width: 425px) {
-    .hero_section{
-        display: flex ;
-        flex-direction: column ;
+@media screen and (max-width: 425px) {
+    .hero_section {
+        display: flex;
+        flex-direction: column;
     }
-    .banner{
+
+    .banner {
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center ;
-        justify-content: center ;
-        gap:1rem;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
     }
-    .banner_containar{
+
+    .banner_containar {
         gap: 1rem;
         padding-right: 4rem;
     }
-    .banner-text{
+
+    .banner-text {
         width: 500px !important;
         font-size: 24px;
     }
-    .shop-button{
+
+    .shop-button {
         width: 200px !important;
         font-size: 15px;
-    
+
     }
-    .roses{
+
+    .roses {
         /* display: none; */
         max-width: 100px;
     }
-    .gift-card-img{
+
+    .gift-card-img {
         width: 250px;
     }
-    }
+}
+
+.today-section {
+    padding: 2rem 0;
+    background: #f8f9fa;
+}
+
+.today-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+}
+
+.offer-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-size: 14px;
+}
+
+.offer-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.btn-shop-now {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    width: 100%;
+}
+
+.swiper-container {
+    padding: 20px 0;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #333;
+}

@@ -19,6 +19,9 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100 gap-5">
+    <div class="loader-container">
+        <img src="../assets/imgs/Logo/meemiis.png" width="150" alt="Logo" class="loader">
+    </div>
     <!-- Header (Same as index.html) -->
     <header class="position-relative ">
         <!-- Top Navbar -->
@@ -100,7 +103,7 @@
         </div>
     </section>
      -->
-     <section class="product-details container my-5">
+    <section class="product-details container my-5">
         <div class="row">
             <!-- Image Section -->
             <div class="col-md-6 text-center">
@@ -110,25 +113,25 @@
                 </div>
 
             </div>
-    
+
             <!-- Details Section -->
             <div class="col-md-6">
                 <h2 class="fw-bold">GINGHAM LOVE</h2>
                 <p class="text-muted">Shower Gel</p>
-                
+
                 <!-- Pricing -->
                 <p class="fs-4">
                     <span class="text-decoration-line-through text-muted">EGP 895</span>
                     <span class="text-danger fw-bold">EGP 545</span>
                 </p>
                 <p class="text-primary">5 for EGP 2295</p>
-    
+
                 <!-- Rating -->
                 <div class="d-flex align-items-center">
                     <span class="text-warning">★★★★★</span>
                     <span class="ms-2">(134) <a href="#" class="text-decoration-none">Write a review</a></span>
                 </div>
-    
+
                 <!-- Quantity and Add to Bag -->
                 <div class="my-3 d-flex align-items-center">
                     <label for="quantity" class="me-2">Quantity:</label>
@@ -140,16 +143,16 @@
                     </select>
                 </div>
                 <button class="button btn btn-dark w-100">ADD TO BAG</button>
-    
+
                 <hr>
-    
+
                 <!-- Product Description -->
                 <h5>Product Description</h5>
                 <p>What it smells like: love at first sight—sweet, warm, happy and playfully romantic.</p>
                 <p><strong>Fragrance notes:</strong> Sugared red berries, blushing freesia, and rose meringue.</p>
-    
+
                 <hr>
-    
+
                 <!-- Delivery Options -->
                 <h5>Delivery Options</h5>
                 <ul class="list-unstyled">
@@ -159,7 +162,7 @@
             </div>
         </div>
     </section>
-    
+
     <div class="products-section container">
         <h2 class="text-center mb-4">Recommend Products</h2>
         <swiper-container class="mySwiper" navigation="true" pagination="true" loop="true" slides-per-view="1"
@@ -168,7 +171,8 @@
             "1024": {"slidesPerView": 4, "spaceBetween": 30}
         }'> <swiper-slide>
                 <div class="card product-card">
-                   <a href="./pages/Products/product_details.html"> <img src="./assets/imgs/home_images/red.jfif" alt="Product 1" class="card-img-top rounded"></a>
+                    <a href="./pages/Products/product_details.html"> <img src="./assets/imgs/home_images/red.jfif"
+                            alt="Product 1" class="card-img-top rounded"></a>
                     <div class="card-body text-center">
                         <div class="product-title fw-bold">Elegant Watch</div>
                         <div class="product-price text-pink fw-bold">EGP 895</div>
@@ -219,162 +223,167 @@
         </swiper-container>
     </div>
     <!-- Reviews Section -->
-     
-<section class="my-5">
-    <div class="bg-light p-4">
-    <div class="container ratings-overview mb-4">
-        <!-- Average Rating Header -->
-         <h2 class=" mb-4">Ratings & Reviews</h2>
-        <div class="d-flex align-items-center justify-content-between gap-2 mb-3">
-            <div class="stars">
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <span class="h4 mb-0">4.7</span>
-            </div>
-            <button class="btn btn-dark col-6 mt-3">Write a review</button>
-        </div>
-        <!-- Rating Bars -->
-         <div class="rating d-flex align-items-center justify-content-between mb-3 ">
-        <div class="rating-bars d col-6">
-            <div class="rating-bar d-flex align-items-center mb-2">
-                <span class="me-2" style="min-width: 60px;">5 stars</span>
-                <div class="progress flex-grow-1" style="height: 12px;">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+
+    <section class="my-5">
+        <div class="bg-light p-4">
+            <div class="container ratings-overview mb-4">
+                <!-- Average Rating Header -->
+                <h2 class=" mb-4">Ratings & Reviews</h2>
+                <div class="d-flex align-items-center justify-content-between gap-2 mb-3">
+                    <div class="stars">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <span class="h4 mb-0">4.7</span>
+                    </div>
+                    <button class="btn btn-dark col-6 mt-3">Write a review</button>
                 </div>
-                <span class="ms-2">114</span>
-            </div>
-            <div class="rating-bar d-flex align-items-center mb-2">
-                <span class="me-2" style="min-width: 60px;">4 stars</span>
-                <div class="progress flex-grow-1" style="height: 12px;">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 10%;" aria-valuenow="10" aria-valuemax="100"></div>
+                <!-- Rating Bars -->
+                <div class="rating d-flex align-items-center justify-content-between mb-3 ">
+                    <div class="rating-bars d col-6">
+                        <div class="rating-bar d-flex align-items-center mb-2">
+                            <span class="me-2" style="min-width: 60px;">5 stars</span>
+                            <div class="progress flex-grow-1" style="height: 12px;">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;"
+                                    aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="ms-2">114</span>
+                        </div>
+                        <div class="rating-bar d-flex align-items-center mb-2">
+                            <span class="me-2" style="min-width: 60px;">4 stars</span>
+                            <div class="progress flex-grow-1" style="height: 12px;">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 10%;"
+                                    aria-valuenow="10" aria-valuemax="100"></div>
+                            </div>
+                            <span class="ms-2">13</span>
+                        </div>
+                        <div class="rating-bar d-flex align-items-center mb-2">
+                            <span class="me-2" style="min-width: 60px;">3 stars</span>
+                            <div class="progress flex-grow-1" style="height: 12px;">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 50%;"
+                                    aria-valuenow="10" aria-valuemax="100"></div>
+                            </div>
+                            <span class="ms-2">53</span>
+                        </div>
+                        <div class="rating-bar d-flex align-items-center mb-2">
+                            <span class="me-2" style="min-width: 60px;">2 stars</span>
+                            <div class="progress flex-grow-1" style="height: 12px;">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 5%;"
+                                    aria-valuenow="10" aria-valuemax="100"></div>
+                            </div>
+                            <span class="ms-2">5</span>
+                        </div>
+                        <div class="rating-bar d-flex align-items-center mb-2">
+                            <span class="me-2" style="min-width: 60px;">1 stars</span>
+                            <div class="progress flex-grow-1" style="height: 12px;">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 25%;"
+                                    aria-valuenow="10" aria-valuemax="100"></div>
+                            </div>
+                            <span class="ms-2">30</span>
+                        </div>
+                    </div>
+
+                    <div class="price-value mt-4">
+                        <span class="fw-bold">Price value:</span>
+                        <div class="stars d-inline-block ms-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                        </div>
+                        <span>4.4</span>
+                    </div>
                 </div>
-                <span class="ms-2">13</span>
-            </div>
-            <div class="rating-bar d-flex align-items-center mb-2">
-                <span class="me-2" style="min-width: 60px;">3 stars</span>
-                <div class="progress flex-grow-1" style="height: 12px;">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 50%;" aria-valuenow="10" aria-valuemax="100"></div>
+
+                <!-- Price Value Rating -->
+
+                <!-- Filter Section -->
+
+                <div class="filter-section mb-4">
+                    <h6 class="mb-3">Filter + Sort</h6>
+                    <div class="row g-3">
+                        <div class="col-md-3">
+                            <select class="form-select">
+                                <option>Sort by</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-select">
+                                <option>Rating</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-select">
+                                <option>Age</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-select">
+                                <option>Location</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-                <span class="ms-2">53</span>
-            </div>
-            <div class="rating-bar d-flex align-items-center mb-2">
-                <span class="me-2" style="min-width: 60px;">2 stars</span>
-                <div class="progress flex-grow-1" style="height: 12px;">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 5%;" aria-valuenow="10" aria-valuemax="100"></div>
-                </div>
-                <span class="ms-2">5</span>
-            </div>
-            <div class="rating-bar d-flex align-items-center mb-2">
-                <span class="me-2" style="min-width: 60px;">1 stars</span>
-                <div class="progress flex-grow-1" style="height: 12px;">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 25%;" aria-valuenow="10" aria-valuemax="100"></div>
-                </div>
-                <span class="ms-2">30</span>
             </div>
         </div>
 
-            <div class="price-value mt-4">
-                <span class="fw-bold">Price value:</span>
-                <div class="stars d-inline-block ms-2">
+
+        <!-- Reviews List -->
+        <div class="reviews-list container">
+            <div class="review-item mb-4">
+                <div class="reviewer-info mb-2">
+                    <h6 class="mb-1">Aiswarya</h6>
+                    <small class="text-muted">Age: 25-34</small>
+                </div>
+                <div class="stars mb-2">
                     <i class="fas fa-star text-warning"></i>
                     <i class="fas fa-star text-warning"></i>
                     <i class="fas fa-star text-warning"></i>
                     <i class="fas fa-star text-warning"></i>
-                    <i class="fas fa-star-half-alt text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
                 </div>
-                <span>4.4</span>
+                <h6 class="review-title mb-1">Very great fragrance</h6>
+                <p class="review-date text-muted small mb-2">Jan 23, 2023</p>
+                <p class="review-text mb-2">Very great fragrance</p>
+
+                <!-- Review Actions -->
+                <div class="review-actions">
+                    <span class="me-3">Was this review helpful?</span>
+                    <button class="btn btn-sm btn-outline-secondary me-2">Yes (0)</button>
+                    <button class="btn btn-sm btn-outline-secondary me-2">No (0)</button>
+                    <button class="btn btn-sm btn-link text-muted">Report</button>
+                </div>
+            </div>
+            <div class="review-item mb-4">
+                <div class="reviewer-info mb-2">
+                    <h6 class="mb-1">Aiswarya</h6>
+                    <small class="text-muted">Age: 25-34</small>
+                </div>
+                <div class="stars mb-2">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                </div>
+                <h6 class="review-title mb-1">Very great fragrance</h6>
+                <p class="review-date text-muted small mb-2">Jan 23, 2023</p>
+                <p class="review-text mb-2">Very great fragrance</p>
+
+                <!-- Review Actions -->
+                <div class="review-actions">
+                    <span class="me-3">Was this review helpful?</span>
+                    <button class="btn btn-sm btn-outline-secondary me-2">Yes (0)</button>
+                    <button class="btn btn-sm btn-outline-secondary me-2">No (0)</button>
+                    <button class="btn btn-sm btn-link text-muted">Report</button>
+                </div>
             </div>
         </div>
-
-        <!-- Price Value Rating -->
-       
-            <!-- Filter Section -->
-
-        <div class="filter-section mb-4">
-            <h6 class="mb-3">Filter + Sort</h6>
-            <div class="row g-3">
-                <div class="col-md-3">
-                    <select class="form-select">
-                        <option>Sort by</option>
-                    </select>
-                </div>
-                <div class="col-md-3">
-                    <select class="form-select">
-                        <option>Rating</option>
-                    </select>
-                </div>
-                <div class="col-md-3">
-                    <select class="form-select">
-                        <option>Age</option>
-                    </select>
-                </div>
-                <div class="col-md-3">
-                    <select class="form-select">
-                        <option>Location</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-
-
-    <!-- Reviews List -->
-    <div class="reviews-list container">
-        <div class="review-item mb-4">
-            <div class="reviewer-info mb-2">
-                <h6 class="mb-1">Aiswarya</h6>
-                <small class="text-muted">Age: 25-34</small>
-            </div>
-            <div class="stars mb-2">
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-            </div>
-            <h6 class="review-title mb-1">Very great fragrance</h6>
-            <p class="review-date text-muted small mb-2">Jan 23, 2023</p>
-            <p class="review-text mb-2">Very great fragrance</p>
-            
-            <!-- Review Actions -->
-            <div class="review-actions">
-                <span class="me-3">Was this review helpful?</span>
-                <button class="btn btn-sm btn-outline-secondary me-2">Yes (0)</button>
-                <button class="btn btn-sm btn-outline-secondary me-2">No (0)</button>
-                <button class="btn btn-sm btn-link text-muted">Report</button>
-            </div>
-        </div>
-        <div class="review-item mb-4">
-            <div class="reviewer-info mb-2">
-                <h6 class="mb-1">Aiswarya</h6>
-                <small class="text-muted">Age: 25-34</small>
-            </div>
-            <div class="stars mb-2">
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-                <i class="fas fa-star text-warning"></i>
-            </div>
-            <h6 class="review-title mb-1">Very great fragrance</h6>
-            <p class="review-date text-muted small mb-2">Jan 23, 2023</p>
-            <p class="review-text mb-2">Very great fragrance</p>
-            
-            <!-- Review Actions -->
-            <div class="review-actions">
-                <span class="me-3">Was this review helpful?</span>
-                <button class="btn btn-sm btn-outline-secondary me-2">Yes (0)</button>
-                <button class="btn btn-sm btn-outline-secondary me-2">No (0)</button>
-                <button class="btn btn-sm btn-link text-muted">Report</button>
-            </div>
-        </div>
-    </div>
-</section>
-<hr style="height:3px;color:#ff69b4;background-color:#ff69b4;">
+    </section>
+    <hr style="height:3px;color:#ff69b4;background-color:#ff69b4;">
     <!-- Footer (Same as index.html) -->
     <footer class="container-fluid py-5">
         <div class="container">
@@ -437,55 +446,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const container = document.querySelector(".magnify-container");
-        const image = document.querySelector(".magnify-image");
-        const glass = document.querySelector(".magnify-glass");
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="../assets/scripts/loader.js"></script>
+    <script src="../assets/scripts/product_details.js"></script>
 
-        // Show magnifying glass on mouse enter
-        container.addEventListener("mouseenter", () => {
-            glass.style.display = "block";
-        });
-
-        // Hide magnifying glass on mouse leave
-        container.addEventListener("mouseleave", () => {
-            glass.style.display = "none";
-        });
-
-        // Move magnifying glass with mouse
-        container.addEventListener("mousemove", (e) => {
-            const rect = container.getBoundingClientRect();
-            const x = e.clientX - rect.left; // Mouse X position relative to the container
-            const y = e.clientY - rect.top; // Mouse Y position relative to the container
-
-            // Ensure the magnifying glass stays within the image boundaries
-            const glassWidth = glass.offsetWidth;
-            const glassHeight = glass.offsetHeight;
-
-            let glassX = x - glassWidth / 2;
-            let glassY = y - glassHeight / 2;
-
-            if (glassX < 0) glassX = 0;
-            if (glassY < 0) glassY = 0;
-            if (glassX > rect.width - glassWidth) glassX = rect.width - glassWidth;
-            if (glassY > rect.height - glassHeight) glassY = rect.height - glassHeight;
-
-            // Position the magnifying glass
-            glass.style.left = `${glassX}px`;
-            glass.style.top = `${glassY}px`;
-
-            // Calculate the background position for the zoom effect
-            const bgX = (x / rect.width) * 100;
-            const bgY = (y / rect.height) * 100;
-
-            // Apply the zoomed background to the magnifying glass
-            glass.style.backgroundImage = `url('${image.src}')`;
-            glass.style.backgroundPosition = `${bgX}% ${bgY}%`;
-        });
-    });
-</script>
 </body>
 
 </html>
