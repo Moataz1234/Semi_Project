@@ -39,12 +39,12 @@ const products = [
 
 function generateProductGrid() {
     const productGrid = document.getElementById('productGrid');
-    
+
     for (let i = 0; i < 10; i++) {
         products.forEach((product, index) => {
             const productCol = document.createElement('div');
             productCol.className = 'col-md-3 mb-4';
-            
+
             productCol.innerHTML = `
                 <div class="card product-card">
                     ${product.trending ? '<span class="badge trending-badge position-absolute top-0 start-0 m-2">Trending!</span>' : ''}
@@ -62,7 +62,8 @@ function generateProductGrid() {
                             </svg>
                         </div>
                     </div>
-                    <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                  <a href="./product_details.html">
+                  <img src="${product.image}" class="card-img-top" alt="${product.name}"></a>
                     <div class="card-body">
                         <h5 class="card-title">${product.name}</h5>
                         <p class="card-text text-muted">${product.type}</p>
@@ -78,7 +79,7 @@ function generateProductGrid() {
                     </div>
                 </div>
             `;
-            
+
             productGrid.appendChild(productCol);
         });
     }
